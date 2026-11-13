@@ -93,3 +93,9 @@ renderer.js：尺寸未變時不重設Canvas繪圖緩衝區；提供ResizeObserv
 新增startup.js及startup.test.mjs：同步發起兩種感測器權限與全螢幕、處理不支援／同步例外／Promise拒絕、限制未返回權限等待時間、吸收延遲拒絕並清理計時器。Start固定本次玩家名稱與題庫引用，啟動期間阻止重載造成資料競爭。76/76完整測試PASS；瀏覽器子路徑實際Start、倒數、遊玩及暫停成功，error/warn為空，截圖.local/qa/startup-verified.png。
 
 再次唯讀查詢：原GitHub connector仍404，gh亦無法解析。使用者隨後明確要求「創立新倉庫」。已透過登入帳號kisaraki建立私有倉庫 https://github.com/kisaraki/classroom-yskk-tzk ，準備推送程式、測試、文件及CI；待審來源、閱讀包、備份與本機截圖仍排除。
+
+新私有倉庫已初始化main並推送首個提交9bb7e1f。只在本倉庫設定已登入帳號kisaraki及GitHub noreply作者信箱，未更動全域Git設定。新增.gitattributes保留工作包精確位元組；Git索引內46項雜湊全部匹配，82個檔案不含_reference／.local／備份，憑證樣式掃描未發現匹配。遠端樹確認私人目錄未上傳。
+
+首輪GitHub Actions驗證成功：https://github.com/kisaraki/classroom-yskk-tzk/actions/runs/43436310997 。verify含工作包檢查、44項契約及32項遊戲測試；release-check依一般push規則略過，並不代表發布核准。
+
+依遠端Node 20 Actions棄用提示，查核官方[checkout v7.0.1](https://github.com/actions/checkout/releases/tag/v7.0.1)與[setup-node v7.1.0](https://github.com/actions/setup-node/releases/tag/v7.1.0)，僅更新根目錄實際工作流並固定官方commit SHA，使用Node 24、ubuntu-24.04；工作包範本及manifest保持不變。待第二輪遠端確認。
