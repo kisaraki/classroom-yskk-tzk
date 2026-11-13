@@ -7,8 +7,8 @@ function attempt(action){
 
 // Invoke this directly in Start's click handler: permission and fullscreen calls
 // must happen before yielding, even if the browser ultimately rejects them.
-export function requestStartAccess(host=globalThis,timeoutMs=2200){
-  const permissions=requestPermissions(host);
+export function requestStartAccess(host=globalThis,timeoutMs=2200,requestMotion=()=>requestPermissions(host)){
+  const permissions=requestMotion();
   const fullscreen=attempt(()=>host.document?.documentElement?.requestFullscreen?.());
   const settled=Promise.allSettled([permissions,fullscreen]);
   let timer;
