@@ -127,3 +127,11 @@ node --test tests/*.test.mjs codex-workpack/tests/*.test.mjs：82/82 PASS。veri
 上一版仍異常，使用者確認以平放桌面校正。查得 WebKit 260984@main（2023-03-01）將 iPad Screen Orientation 的自然方向設為 landscape-primary：https://github.com/WebKit/WebKit/commit/f0224968ed57e28fcf80825627817e4e435231eb 。因此原 angle() 把 screen.orientation.angle 直接當成感測器直向座標的角度不成立；上一版測試只使用直向自然基準，未涵蓋此組合。
 
 iOS 改用與感測器同基準的 window.orientation；缺少時由 Screen Orientation type 轉為直向基準。Android 保留原生角度。新增四姿態、兩種角度來源的回歸測試。診斷顯示控制版本 20261114.2、實際轉換角度及兩種 API 原始角度；入口及更新模組附版本查詢參數避免沿用舊快取。實機方向仍待使用者重測，不宣稱已通過。
+
+## 2026-11-14 山林中式視覺與首頁宣告
+
+使用者回報感測方向正常（iPad mini 7 / iPadOS 26）；此為使用者實測回報，不擴張為其他裝置全項驗收。保留控制模組20261114.2。
+
+依要求新增原創 SVG 山林插畫（遠山、松竹、亭閣、飛鳥）、宣紙及印章風格首頁，加入原文「2026桃園市立觀音國民中學國語文領域教學研究會」「圖書館閱讀推動教師團隊」。五關固定色碼不變，擴展至場地底色、邊框、HUD、搖桿及按鈕。靜態 SVG 一次載入，Canvas 使用同一圖像繪製；不改物理與關卡條件。
+
+83/83 自動測試 PASS。1133×744 橫向瀏覽器首頁截圖 .local/qa/forest-home.png；文字與鍵盤完整可見，啟動遊戲成功，error/warn 為空。此為桌面視窗尺寸驗證，不等於新主題的 iPad 實機驗收。網站入口版本20261114.3，控制診斷仍顯示20261114.2。平板測試部署增加一個插畫資源，題庫保持 PENDING，正式發布守門不變。

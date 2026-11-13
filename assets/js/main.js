@@ -6,7 +6,7 @@ import {Game,FixedClock} from './state.js';
 import {mountKeyboard,validName} from './keyboard.js';
 import {InputController} from './input.js?v=20261114.2';
 import {requestStartAccess,lockLandscape} from './startup.js';
-import {Renderer} from './renderer.js';
+import {Renderer} from './renderer.js?v=20261114.3';
 const $=id=>document.getElementById(id),tabletTest=SITE_MODE==='tablet-test',preview=tabletTest||(['localhost','127.0.0.1','[::1]'].includes(location.hostname)&&new URLSearchParams(location.search).get('preview')==='1');
 let game=null,dataset=null,name='',busy=false,lastIdiom=null,lastIndex=-1,lastStatus='',lastFeedback=0,permissionInterrupted=false,keyboardReady=false,loading=false;
 const clock=new FixedClock(),input=new InputController(),renderer=new Renderer($('canvas'));input.attach($('joystick'));
