@@ -1,0 +1,311 @@
+{
+  "schemaVersion": 2,
+  "derivedFrom": "CODEX_SPEC.md v1.3 §1, §2",
+  "states": [
+    "BOOT",
+    "HOME",
+    "PERMISSION_CHECK",
+    "READY",
+    "PLAYING",
+    "PAUSED",
+    "IDIOM_CLEAR",
+    "LEVEL_CLEAR",
+    "LEVEL_FAILED",
+    "GAME_CLEAR"
+  ],
+  "transitions": [
+    {
+      "from": "BOOT",
+      "event": "INITIALIZED",
+      "to": "HOME"
+    },
+    {
+      "from": "HOME",
+      "event": "START_VALID",
+      "to": "PERMISSION_CHECK"
+    },
+    {
+      "from": "PERMISSION_CHECK",
+      "event": "PERMISSION_DONE_OR_FALLBACK",
+      "to": "READY",
+      "when": {
+        "pageVisible": true,
+        "landscape": true
+      }
+    },
+    {
+      "from": "READY",
+      "event": "COUNTDOWN_DONE",
+      "to": "PLAYING",
+      "when": {
+        "pageVisible": true,
+        "landscape": true
+      }
+    },
+    {
+      "from": "PLAYING",
+      "event": "IDIOM_COMPLETED",
+      "to": "IDIOM_CLEAR"
+    },
+    {
+      "from": "IDIOM_CLEAR",
+      "event": "NEXT_IDIOM",
+      "to": "PLAYING",
+      "when": {
+        "pageVisible": true,
+        "landscape": true
+      }
+    },
+    {
+      "from": "IDIOM_CLEAR",
+      "event": "LEVEL_REQUIREMENT_DONE",
+      "to": "LEVEL_CLEAR"
+    },
+    {
+      "from": "LEVEL_CLEAR",
+      "event": "NEXT_LEVEL",
+      "to": "READY",
+      "when": {
+        "pageVisible": true,
+        "landscape": true
+      }
+    },
+    {
+      "from": "LEVEL_CLEAR",
+      "event": "FIFTH_LEVEL_DONE",
+      "to": "GAME_CLEAR"
+    },
+    {
+      "from": "PLAYING",
+      "event": "TIMER_ZERO_BEFORE_LEVEL_CLEAR",
+      "to": "LEVEL_FAILED"
+    },
+    {
+      "from": "LEVEL_FAILED",
+      "event": "RETRY_A_CONFIRMED_AND_AVAILABLE",
+      "to": "READY",
+      "when": {
+        "pageVisible": true,
+        "landscape": true
+      },
+      "set": {
+        "resumeState": null
+      }
+    },
+    {
+      "from": "PLAYING",
+      "event": "RETRY_A_CONFIRMED_AND_AVAILABLE",
+      "to": "READY",
+      "when": {
+        "pageVisible": true,
+        "landscape": true
+      },
+      "set": {
+        "resumeState": null
+      }
+    },
+    {
+      "from": "PAUSED",
+      "event": "RETRY_A_CONFIRMED_AND_AVAILABLE",
+      "to": "READY",
+      "when": {
+        "pageVisible": true,
+        "landscape": true
+      },
+      "set": {
+        "resumeState": null
+      }
+    },
+    {
+      "from": "PLAYING",
+      "event": "RESTART_R_CONFIRMED",
+      "to": "READY",
+      "when": {
+        "pageVisible": true,
+        "landscape": true
+      },
+      "set": {
+        "resumeState": null
+      }
+    },
+    {
+      "from": "PAUSED",
+      "event": "RESTART_R_CONFIRMED",
+      "to": "READY",
+      "when": {
+        "pageVisible": true,
+        "landscape": true
+      },
+      "set": {
+        "resumeState": null
+      }
+    },
+    {
+      "from": "LEVEL_FAILED",
+      "event": "RESTART_R_CONFIRMED",
+      "to": "READY",
+      "when": {
+        "pageVisible": true,
+        "landscape": true
+      },
+      "set": {
+        "resumeState": null
+      }
+    },
+    {
+      "from": "LEVEL_CLEAR",
+      "event": "RESTART_R_CONFIRMED",
+      "to": "READY",
+      "when": {
+        "pageVisible": true,
+        "landscape": true
+      },
+      "set": {
+        "resumeState": null
+      }
+    },
+    {
+      "from": "GAME_CLEAR",
+      "event": "RESTART_R_CONFIRMED",
+      "to": "READY",
+      "when": {
+        "pageVisible": true,
+        "landscape": true
+      },
+      "set": {
+        "resumeState": null
+      }
+    },
+    {
+      "from": "READY",
+      "event": "PAUSE_OR_BACKGROUND",
+      "to": "PAUSED",
+      "set": {
+        "resumeState": "READY"
+      }
+    },
+    {
+      "from": "PAUSED",
+      "event": "USER_RESUME",
+      "to": "READY",
+      "when": {
+        "resumeState": "READY",
+        "pageVisible": true,
+        "landscape": true
+      },
+      "set": {
+        "resumeState": null
+      }
+    },
+    {
+      "from": "PLAYING",
+      "event": "PAUSE_OR_BACKGROUND",
+      "to": "PAUSED",
+      "set": {
+        "resumeState": "PLAYING"
+      }
+    },
+    {
+      "from": "PAUSED",
+      "event": "USER_RESUME",
+      "to": "PLAYING",
+      "when": {
+        "resumeState": "PLAYING",
+        "pageVisible": true,
+        "landscape": true
+      },
+      "set": {
+        "resumeState": null
+      }
+    },
+    {
+      "from": "IDIOM_CLEAR",
+      "event": "PAUSE_OR_BACKGROUND",
+      "to": "PAUSED",
+      "set": {
+        "resumeState": "IDIOM_CLEAR"
+      }
+    },
+    {
+      "from": "PAUSED",
+      "event": "USER_RESUME",
+      "to": "IDIOM_CLEAR",
+      "when": {
+        "resumeState": "IDIOM_CLEAR",
+        "pageVisible": true,
+        "landscape": true
+      },
+      "set": {
+        "resumeState": null
+      }
+    },
+    {
+      "from": "READY",
+      "event": "RESTART_R_CONFIRMED",
+      "to": "READY",
+      "when": {
+        "pageVisible": true,
+        "landscape": true
+      },
+      "set": {
+        "resumeState": null
+      }
+    },
+    {
+      "from": "IDIOM_CLEAR",
+      "event": "RESTART_R_CONFIRMED",
+      "to": "READY",
+      "when": {
+        "pageVisible": true,
+        "landscape": true
+      },
+      "set": {
+        "resumeState": null
+      }
+    }
+  ],
+  "invariants": [
+    "PLAYING 才可計算碰撞和減少正式關卡時間",
+    "所有非 PLAYING 狀態均不得增加 nextIndex",
+    "每題 nextIndex 介於 0 至 4 並衍生四格字卡",
+    "A confirmed only after confirmation; 0..3 attempts per level",
+    "R reset to level 1 and reselect 19 idioms",
+    "if correct final hit and time-zero occur same step, award hit before timeout",
+    "READY、PLAYING、IDIOM_CLEAR 背景或方向改變均進 PAUSED，手動恢復到 resumeState 而非一律 PLAYING",
+    "PAUSED 保留準備倒數與切題回饋剩餘時間；背景回傳的倒數/切題事件不推進",
+    "所有進入 READY/PLAYING 的轉移要求 pageVisible && landscape；R/A 清除舊 resumeState"
+  ],
+  "pausePolicy": {
+    "resumableStates": [
+      "READY",
+      "PLAYING",
+      "IDIOM_CLEAR"
+    ],
+    "context": {
+      "resumeState": null,
+      "pageVisible": true,
+      "landscape": true
+    },
+    "transitionSemantics": "when 的所有欄位須與 context 嚴格相等；匹配 from/event/when 後套用 to 與 set。無匹配事件不得改變狀態。",
+    "preserved": [
+      "readyCountdownRemaining",
+      "idiomFeedbackRemaining",
+      "remainingSeconds",
+      "nextIndex",
+      "worldPositions",
+      "worldVelocities"
+    ],
+    "onPause": [
+      "freezeAllTimers",
+      "clearInput",
+      "cancelPendingTransitionCallbacks"
+    ],
+    "onResume": [
+      "resetFrameTimestamp",
+      "clearAccumulator",
+      "clearInput"
+    ],
+    "returnToVisible": "只更新 pageVisible/landscape，不自動派送 USER_RESUME；重複暫停不得覆寫 resumeState。",
+    "callbacks": "READY 與 IDIOM_CLEAR 只累積前景有效 dt；不可用背景仍會完成的裸 setTimeout 推進。權限完成時若背景或直向，保留結果待玩家前景操作再進 READY。"
+  }
+}

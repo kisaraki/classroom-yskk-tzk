@@ -1,0 +1,11 @@
+{
+  "name": "idioms-pinball",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs codex-workpack/tests/*.test.mjs",
+    "start": "node tools/serve.mjs",
+    "release:check": "node codex-workpack/tools/check-release.mjs"
+  }
+}

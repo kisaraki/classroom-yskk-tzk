@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/idioms-pinball/idioms.schema.json",
+  "title": "成語彈珠臺正式題庫之結構格式（需另做人工作業）",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "count",
+    "items",
+    "linguisticReviewStatus"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "count": {
+      "const": 500
+    },
+    "linguisticReviewStatus": {
+      "enum": [
+        "PENDING",
+        "APPROVED"
+      ]
+    },
+    "sourceEdition": {
+      "type": "string"
+    },
+    "legalAttribution": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "minItems": 500,
+      "maxItems": 500,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "idiom",
+          "zhuyin",
+          "definition",
+          "difficulty",
+          "source"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^I[0-9]{4}$"
+          },
+          "idiom": {
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 4
+          },
+          "zhuyin": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "definition": {
+            "type": "string",
+            "minLength": 2
+          },
+          "difficulty": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "source": {
+            "type": "string",
+            "minLength": 1
+          },
+          "linguisticReview": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "description": "僅為結構契約。JSON Schema 不能驗證漢字真實詞義、注音正確性或授權合法性；另執行 validate-idioms.mjs 與人工作業。"
+}

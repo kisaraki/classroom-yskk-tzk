@@ -1,0 +1,4 @@
+* text=auto eol=lf
+# Workpack manifest hashes bind exact bytes, including existing line endings.
+codex-workpack/** -text
+*.pdf binary

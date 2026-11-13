@@ -1,0 +1,5 @@
+# 待審官方資料／匯入產物不隨工作包直接提交
+_reference/
+data/idioms_500.json
+data/IMPORT_REVIEW.md
+*.log

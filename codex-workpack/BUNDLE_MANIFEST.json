@@ -1,0 +1,245 @@
+{
+  "bundleName": "成語彈珠臺 Codex 開發工作包",
+  "bundleVersion": "2.1",
+  "createdAt": "2026-11-13",
+  "targetRepository": "kisaraki/classroom-yskk-tzk",
+  "destinationFolder": "codex-workpack",
+  "productSpecVersion": "1.3",
+  "candidateCount": 500,
+  "linguisticDatasetReady": false,
+  "gameImplemented": false,
+  "realDeviceVerified": false,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 124,
+      "sha256": "a862e951f41223248f003c5e16d15d0b3fe57f6c15e94243c060a9c142e4487d"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 3517,
+      "sha256": "d4a97f065f62d7e6072762a0684f1d8de92374b5568eb63dcfc0ef1df23fd06e"
+    },
+    {
+      "path": "CODEX_RUN_PROMPT.txt",
+      "bytes": 1564,
+      "sha256": "2af01fe974fd09c9158ca36e41ff3613f16e43069d7a5c8ce50ac816539c380e"
+    },
+    {
+      "path": "CODEX_SPEC.md",
+      "bytes": 44520,
+      "sha256": "7bac3b9e1d95b4cebfe84a79c37eb042bbbfc64fb8bdaccf40265d95876751e8"
+    },
+    {
+      "path": "README_FIRST.md",
+      "bytes": 896,
+      "sha256": "b6894f92e06a37c5e44447c638dca5ba4be2e44bde932370d3c0948366f05f8e"
+    },
+    {
+      "path": "ROOT_AGENTS_SNIPPET.md",
+      "bytes": 895,
+      "sha256": "7ffa3dba3c9d9fe83865c9c3e614c87334b24dbf3d7da65ea87a3c9e4392cc88"
+    },
+    {
+      "path": "ROOT_GITIGNORE_SNIPPET.txt",
+      "bytes": 290,
+      "sha256": "2c4c5f8a3b477ce1add3246d7e70af241a7010d4a8bf3cf1475ed353a129d471"
+    },
+    {
+      "path": "START_HERE.md",
+      "bytes": 4526,
+      "sha256": "44e15b29776debad4f6909475d732a83ab255e609bd9663f4aad2732cc0ba8cd"
+    },
+    {
+      "path": "contracts/README.md",
+      "bytes": 797,
+      "sha256": "768bb16be100459e214b09fb7906efa3ffa7729c970403f37e5c7cbaa55cacf4"
+    },
+    {
+      "path": "contracts/idioms.schema.json",
+      "bytes": 1972,
+      "sha256": "5d3d67cebd3f7abc4f0fabaca40e7f5e12a1f7170ef50d0814ea6d6ecdce8e4a"
+    },
+    {
+      "path": "contracts/keyboard-presets.example.json",
+      "bytes": 560,
+      "sha256": "a4a87c1d544c6eba96b35bd7b709fd5b0b35b8a83716ea7d52edf0c7c939d169"
+    },
+    {
+      "path": "contracts/levels.json",
+      "bytes": 1346,
+      "sha256": "29ae7aa6a061f174dc04665b21729c14cbaae9bfb64510aaf235903483298662"
+    },
+    {
+      "path": "contracts/state-machine.json",
+      "bytes": 6995,
+      "sha256": "3200d8e6a63b7ce5ddcb051e06e5401d69e6b4c37e4eb9435309b6270365d65b"
+    },
+    {
+      "path": "data/README.md",
+      "bytes": 888,
+      "sha256": "df5efe6718dbdf613d7fe504149679e7c00ea3dc9e1b43cb6542739fa279aa00"
+    },
+    {
+      "path": "data/SOURCES.md",
+      "bytes": 3217,
+      "sha256": "4b2592a8242407532e43d344a690cd03ffa413218d073ae0112bebc5975150be"
+    },
+    {
+      "path": "data/idiom_linguistic_review.csv",
+      "bytes": 13604,
+      "sha256": "e6b0d6a68830979eaa87777a29cf46e111478944d384b349392c6f931fce9290"
+    },
+    {
+      "path": "data/idiom_textbook_review.csv",
+      "bytes": 21690,
+      "sha256": "f9ad1a5981fb4d511a05c14e4820939c9a875e689110d7b61f60ed335a12ef28"
+    },
+    {
+      "path": "data/idioms_500_selection.csv",
+      "bytes": 21100,
+      "sha256": "a53baa42179f7b449847208b9c88ca306ee2968a2a6abb979e2b6a916fa21a17"
+    },
+    {
+      "path": "data/idioms_500_selection.json",
+      "bytes": 88649,
+      "sha256": "b769c04cd7f2126b3cc76f41de474b0a80d3d72e355fd6b82bf2a355ea24317f"
+    },
+    {
+      "path": "docs/ACCEPTANCE_MATRIX.md",
+      "bytes": 5769,
+      "sha256": "1a211ea73e3c2af191fe3d8484a1bb24d535c98e3792656fba58ea77e92e5122"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "bytes": 8646,
+      "sha256": "efa3432fd53199695a2cdcef968875692675a8d833cf289d4bef4ef40f385bef"
+    },
+    {
+      "path": "docs/CI_WORKFLOW_TEMPLATE.yml",
+      "bytes": 1649,
+      "sha256": "0f81a3a29e7d44105eccc94db1c01985266220c8c346561dec4bedb05807e17e"
+    },
+    {
+      "path": "docs/DATA_GOVERNANCE.md",
+      "bytes": 6404,
+      "sha256": "45e0b0de58169fddac5dfee488f980ecdd6f0374514c30da8b6a9f066125b0ff"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "bytes": 2446,
+      "sha256": "8ce7835a9780705e155e20ec84ee519e900044ce8f1227403fa8dca3eeafb591"
+    },
+    {
+      "path": "docs/GITHUB_PAGES_AND_CI.md",
+      "bytes": 3435,
+      "sha256": "772b78bc72a2cfad80c369491f541e18c685ec3f711165fdeb6801422fdd069a"
+    },
+    {
+      "path": "docs/IMPLEMENTATION_PLAN.md",
+      "bytes": 8484,
+      "sha256": "6537d63f8994e7851f1b430b72c4bb54d3a0525b1aec64d28340a61433226508"
+    },
+    {
+      "path": "docs/QA_DEVICE_MATRIX.md",
+      "bytes": 2438,
+      "sha256": "791cc25d8b353277ccc1b05716367ed4dd18216b99aadd8aeef027b714fffa30"
+    },
+    {
+      "path": "docs/REPORT_TEMPLATES.md",
+      "bytes": 1415,
+      "sha256": "f5edeb3705e0d0a8e47bade62d17b6932bb6a4051fe058f410066840e361d47c"
+    },
+    {
+      "path": "docs/TASK_BOARD.md",
+      "bytes": 3853,
+      "sha256": "970da7e2288f437ba47524d77c389ac63b0e524167bee0a02d3f1c1b3fd79fbc"
+    },
+    {
+      "path": "docs/TROUBLESHOOTING.md",
+      "bytes": 1286,
+      "sha256": "0913e36fafb276b6fa3cffc726a5a9af330d84af2b988be8fde66338a19801d7"
+    },
+    {
+      "path": "docs/WORKPACK_FIX_REPORT.md",
+      "bytes": 5213,
+      "sha256": "3ebe3873e973aa8fc91ea42423f1a8a03a5c21efabbe5d8d677cc39a603a03f3"
+    },
+    {
+      "path": "docs/idioms_500_terms.txt",
+      "bytes": 6500,
+      "sha256": "9afd248952169c5bd1b4f4942c358e55dba63d817a760a1c2d1fa278db5d24e4"
+    },
+    {
+      "path": "tests/helpers/fixtures.mjs",
+      "bytes": 2495,
+      "sha256": "b684b0fa474349e073b9d9eaa54a2db3ca398524ff13b1481e24e4711a3d20ee"
+    },
+    {
+      "path": "tests/import.test.mjs",
+      "bytes": 4724,
+      "sha256": "7c057379e9be4bb33c031c067fda7bb0130bab22e49f4cbce017a06d5d18c92e"
+    },
+    {
+      "path": "tests/pause-contract.test.mjs",
+      "bytes": 2410,
+      "sha256": "3011e1d90abf4445bdcbd8d67a00017390bd116cbbe22d9049e903a021397181"
+    },
+    {
+      "path": "tests/release-gate.test.mjs",
+      "bytes": 2926,
+      "sha256": "a04dfb8f8022cd750d99e1d3f9074f630df955a3176978ed69cc516e344f5751"
+    },
+    {
+      "path": "tests/review-binding.test.mjs",
+      "bytes": 3209,
+      "sha256": "29b18d3e6ca5bcbd3271a674b1c8b105ee7c38bbd079df38adc16b92532bc3f2"
+    },
+    {
+      "path": "tests/validator-negative.test.mjs",
+      "bytes": 2087,
+      "sha256": "7abd492c13b7549cb8309a16ac239aedb710be37dbfa882b05338187e5b2b26a"
+    },
+    {
+      "path": "tests/workpack.test.mjs",
+      "bytes": 4066,
+      "sha256": "8930af8fe60146a771456695eedec3eaa4573d7ebd6e72f2212c4bdc94dc9740"
+    },
+    {
+      "path": "tools/check-release.mjs",
+      "bytes": 2536,
+      "sha256": "040670b37662c7c15ad316ca0e67d9d9b69e6181a6dc75e9c8f0a7137a6c51e9"
+    },
+    {
+      "path": "tools/import-idioms.mjs",
+      "bytes": 7060,
+      "sha256": "f3485f56de4409f14facacd9df5284f3eaa0e0ead9c4f2543b04d6a89509cd29"
+    },
+    {
+      "path": "tools/lib/review-content.mjs",
+      "bytes": 848,
+      "sha256": "cf5d9f929551c5a6b393672725054d34db56036223cf334c06930792b2cc82ab"
+    },
+    {
+      "path": "tools/review-fingerprint.mjs",
+      "bytes": 1170,
+      "sha256": "94318a82130f504e3f56ea5b34a36caf655605c98148fba0e0c540706bca3dd2"
+    },
+    {
+      "path": "tools/validate-idioms.mjs",
+      "bytes": 9009,
+      "sha256": "5f0067b5f798b87d0c304db6c793344618efbc989e6f89cd083ab2c99acf078f"
+    },
+    {
+      "path": "tools/validate-selection.mjs",
+      "bytes": 3001,
+      "sha256": "cc78449e065a8c51a88f40aaf3fe372edf2c4b83978dccf03a943d4e78b8a2ce"
+    },
+    {
+      "path": "tools/verify-workpack.mjs",
+      "bytes": 3932,
+      "sha256": "75686cc2d73eb50ab2d5fab88316812abc1d504349517abf52f072b58ca7d361"
+    }
+  ],
+  "updatedAt": "2026-11-13"
+}

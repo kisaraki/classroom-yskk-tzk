@@ -1,0 +1,11 @@
+請執行本倉庫《成語彈珠臺》完整開發工作包。
+
+1. 先完整閱讀 codex-workpack/START_HERE.md、codex-workpack/AGENTS.md、codex-workpack/CODEX_SPEC.md，再讀 codex-workpack/docs/IMPLEMENTATION_PLAN.md、docs/TASK_BOARD.md、docs/ACCEPTANCE_MATRIX.md 與 docs/DATA_GOVERNANCE.md。必要時閱讀 contracts 與工具程式。
+2. 先執行 M0 現況盤點，保留既有程式、現有規格與 Git 歷史；說明已存在的模組，缺少的模組才建立。
+3. 按 M1 到 M5 逐階段實作。正式遊戲寫在倉庫根目錄而不是 codex-workpack 內；每個階段都須可運行、附測試證據。
+4. 以 CODEX_SPEC.md v1.3 為唯一正式產品需求，不准改動五關時限（240／210／180／180／150 秒）、成語條數、場上物件配置、色碼或碰撞規則。逐字碰撞 HUD 的三狀態與 charIndex 是必要功能。
+5. 沿用 codex-workpack/data/idioms_500_selection.json 中的 500 條候選詞目。須取得合法、可查核的注音與釋義才產生正式遊戲題庫；不能湊數或假裝已通過人工驗證。不得將測試假資料上線。
+6. 先執行工作包檢核，後續持續執行功能測試、相容性檢查及人工驗收表。無 iPad／Android 實機或無 GitHub 權限時，明確標記限制，不得虛稱通過或已部署。
+7. 每階段回報：修改檔案、完成項、測試命令與結果、未完成／受阻項、下一步。遇到非必要阻礙，繼續完成可安全完成部分，不要只交空框架。
+
+現在先進行 M0 檢查，接著直接開始 M1。

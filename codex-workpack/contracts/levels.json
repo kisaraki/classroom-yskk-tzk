@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "derivedFrom": "CODEX_SPEC.md v1.3 §2",
+  "note": "此表是規格鏡像，衝突時以 CODEX_SPEC.md v1.3 為準。",
+  "levels": [
+    {
+      "level": 1,
+      "color": "#2E7D32",
+      "durationSeconds": 240,
+      "idiomsRequired": 2,
+      "targetPosts": 4,
+      "targetBalls": 0,
+      "distractorPosts": 2,
+      "distractorBalls": 0
+    },
+    {
+      "level": 2,
+      "color": "#1565C0",
+      "durationSeconds": 210,
+      "idiomsRequired": 3,
+      "targetPosts": 3,
+      "targetBalls": 1,
+      "distractorPosts": 2,
+      "distractorBalls": 2
+    },
+    {
+      "level": 3,
+      "color": "#EF6C00",
+      "durationSeconds": 180,
+      "idiomsRequired": 4,
+      "targetPosts": 2,
+      "targetBalls": 2,
+      "distractorPosts": 2,
+      "distractorBalls": 4
+    },
+    {
+      "level": 4,
+      "color": "#6A1B9A",
+      "durationSeconds": 180,
+      "idiomsRequired": 5,
+      "targetPosts": 1,
+      "targetBalls": 3,
+      "distractorPosts": 1,
+      "distractorBalls": 6
+    },
+    {
+      "level": 5,
+      "color": "#C62828",
+      "durationSeconds": 150,
+      "idiomsRequired": 5,
+      "targetPosts": 0,
+      "targetBalls": 4,
+      "distractorPosts": 1,
+      "distractorBalls": 8
+    }
+  ],
+  "totals": {
+    "durationSeconds": 960,
+    "idiomsRequired": 19,
+    "requiredHits": 76
+  }
+}

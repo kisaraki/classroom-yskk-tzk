@@ -1,0 +1,3518 @@
+{
+  "schemaVersion": 1,
+  "selectionVersion": "1.3",
+  "count": 500,
+  "title": "成語彈珠臺：臺灣國小、國中、高中適用四字成語候選清單（非逐版課本收錄證明）",
+  "method": "教育部《成語典》衍生公開整理資料，依公開原始順序選取前500個不同之四字漢字成語；初步教學階段為編者建議、尚未由課本逐版核實。",
+  "reference": {
+    "officialDictionary": "https://dict.idioms.moe.edu.tw/",
+    "officialData": "https://language.moe.gov.tw/001/Upload/Files/site_content/M0001/respub/dict_idiomsdict_download.html",
+    "officialLatestAsOf20261113": "2020_20260929",
+    "selectionSource": "https://github.com/jfsblog/Idiom-Search-Engine/blob/main/database.json",
+    "selectionSourceEdition": "2020_20240926（由倉庫相關檔名推定；須人工比對資料版號）",
+    "textbookCorpus": "尚未取得南一／康軒／翰林等各年級課本全文及授權，不能聲稱逐條收錄。",
+    "licenseNote": "來源資料若納入原釋義及注音，須依教育部 CC BY-ND 3.0 TW 使用說明保留原文、標註來源及版本。"
+  },
+  "items": [
+    {
+      "id": "I0001",
+      "idiom": "一毛不拔",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0002",
+      "idiom": "掩耳盜鈴",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0003",
+      "idiom": "囫圇吞棗",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0004",
+      "idiom": "朝三暮四",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0005",
+      "idiom": "竭澤而漁",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0006",
+      "idiom": "舉一反三",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0007",
+      "idiom": "青出於藍",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0008",
+      "idiom": "含沙射影",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0009",
+      "idiom": "草木皆兵",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0010",
+      "idiom": "東窗事發",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0011",
+      "idiom": "勢如破竹",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0012",
+      "idiom": "滄海桑田",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0013",
+      "idiom": "夜郎自大",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0014",
+      "idiom": "信口雌黃",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0015",
+      "idiom": "作法自斃",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0016",
+      "idiom": "杞人憂天",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0017",
+      "idiom": "不學無術",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0018",
+      "idiom": "走馬看花",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0019",
+      "idiom": "杯弓蛇影",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0020",
+      "idiom": "東山再起",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0021",
+      "idiom": "樂不思蜀",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0022",
+      "idiom": "濫竽充數",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0023",
+      "idiom": "功虧一簣",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0024",
+      "idiom": "入木三分",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0025",
+      "idiom": "螳臂當車",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0026",
+      "idiom": "咄咄逼人",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0027",
+      "idiom": "出類拔萃",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0028",
+      "idiom": "一竅不通",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0029",
+      "idiom": "吹毛求疵",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0030",
+      "idiom": "孤注一擲",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0031",
+      "idiom": "滄海一粟",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0032",
+      "idiom": "痛心疾首",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0033",
+      "idiom": "扶搖直上",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0034",
+      "idiom": "風聲鶴唳",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0035",
+      "idiom": "老當益壯",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0036",
+      "idiom": "未雨綢繆",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0037",
+      "idiom": "不共戴天",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0038",
+      "idiom": "剛愎自用",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0039",
+      "idiom": "出爾反爾",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0040",
+      "idiom": "目不識丁",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0041",
+      "idiom": "百折不撓",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0042",
+      "idiom": "拾人牙慧",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0043",
+      "idiom": "耳濡目染",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0044",
+      "idiom": "杯水車薪",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0045",
+      "idiom": "車載斗量",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0046",
+      "idiom": "燃眉之急",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0047",
+      "idiom": "言不由衷",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0048",
+      "idiom": "不倫不類",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0049",
+      "idiom": "虎頭蛇尾",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0050",
+      "idiom": "空中樓閣",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0051",
+      "idiom": "天經地義",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0052",
+      "idiom": "心猿意馬",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0053",
+      "idiom": "群策群力",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0054",
+      "idiom": "有備無患",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0055",
+      "idiom": "裹足不前",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0056",
+      "idiom": "戰戰兢兢",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0057",
+      "idiom": "借花獻佛",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0058",
+      "idiom": "故步自封",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0059",
+      "idiom": "笑裡藏刀",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0060",
+      "idiom": "水到渠成",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0061",
+      "idiom": "芒刺在背",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0062",
+      "idiom": "開門見山",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0063",
+      "idiom": "土崩瓦解",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0064",
+      "idiom": "東施效顰",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0065",
+      "idiom": "從善如流",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0066",
+      "idiom": "袖手旁觀",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0067",
+      "idiom": "因勢利導",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0068",
+      "idiom": "畏首畏尾",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0069",
+      "idiom": "名不虛傳",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0070",
+      "idiom": "喪心病狂",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0071",
+      "idiom": "見異思遷",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0072",
+      "idiom": "明察秋毫",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0073",
+      "idiom": "作威作福",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0074",
+      "idiom": "兩袖清風",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0075",
+      "idiom": "明目張膽",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0076",
+      "idiom": "肝膽相照",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0077",
+      "idiom": "民不聊生",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0078",
+      "idiom": "明哲保身",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0079",
+      "idiom": "妄自菲薄",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0080",
+      "idiom": "泥牛入海",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0081",
+      "idiom": "休戚相關",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0082",
+      "idiom": "重整旗鼓",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0083",
+      "idiom": "脣亡齒寒",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0084",
+      "idiom": "文過飾非",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0085",
+      "idiom": "別出心裁",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0086",
+      "idiom": "大公無私",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0087",
+      "idiom": "落井下石",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0088",
+      "idiom": "臨渴掘井",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0089",
+      "idiom": "八面玲瓏",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0090",
+      "idiom": "一揮而就",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0091",
+      "idiom": "一意孤行",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0092",
+      "idiom": "汗牛充棟",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0093",
+      "idiom": "仰人鼻息",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0094",
+      "idiom": "乳臭未乾",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0095",
+      "idiom": "開門揖盜",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0096",
+      "idiom": "危如累卵",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0097",
+      "idiom": "得意忘形",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0098",
+      "idiom": "三令五申",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0099",
+      "idiom": "短兵相接",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0100",
+      "idiom": "按部就班",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0101",
+      "idiom": "錦上添花",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0102",
+      "idiom": "得隴望蜀",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0103",
+      "idiom": "沾沾自喜",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0104",
+      "idiom": "毛遂自薦",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0105",
+      "idiom": "外強中乾",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0106",
+      "idiom": "井井有條",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0107",
+      "idiom": "六神無主",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0108",
+      "idiom": "本末倒置",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0109",
+      "idiom": "良莠不齊",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0110",
+      "idiom": "水乳交融",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0111",
+      "idiom": "夜以繼日",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0112",
+      "idiom": "防微杜漸",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0113",
+      "idiom": "岌岌可危",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0114",
+      "idiom": "沽名釣譽",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0115",
+      "idiom": "以訛傳訛",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0116",
+      "idiom": "一落千丈",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0117",
+      "idiom": "一針見血",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0118",
+      "idiom": "萬籟俱寂",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0119",
+      "idiom": "笑容可掬",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0120",
+      "idiom": "揮金如土",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0121",
+      "idiom": "嗤之以鼻",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0122",
+      "idiom": "急流勇退",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0123",
+      "idiom": "赴湯蹈火",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0124",
+      "idiom": "包藏禍心",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0125",
+      "idiom": "旗鼓相當",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0126",
+      "idiom": "樂不可支",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0127",
+      "idiom": "分道揚鑣",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0128",
+      "idiom": "曇花一現",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0129",
+      "idiom": "目中無人",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0130",
+      "idiom": "春風得意",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0131",
+      "idiom": "難兄難弟",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0132",
+      "idiom": "海闊天空",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0133",
+      "idiom": "偷天換日",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0134",
+      "idiom": "孤芳自賞",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0135",
+      "idiom": "坐以待斃",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0136",
+      "idiom": "一舉兩得",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0137",
+      "idiom": "守口如瓶",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0138",
+      "idiom": "自投羅網",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0139",
+      "idiom": "人面獸心",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0140",
+      "idiom": "忘恩負義",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0141",
+      "idiom": "川流不息",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0142",
+      "idiom": "天涯海角",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0143",
+      "idiom": "九死一生",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0144",
+      "idiom": "如數家珍",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0145",
+      "idiom": "情不自禁",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0146",
+      "idiom": "想入非非",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0147",
+      "idiom": "鬼鬼祟祟",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0148",
+      "idiom": "置若罔聞",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0149",
+      "idiom": "捕風捉影",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0150",
+      "idiom": "義不容辭",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0151",
+      "idiom": "異想天開",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0152",
+      "idiom": "當仁不讓",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0153",
+      "idiom": "恍然大悟",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0154",
+      "idiom": "穿鑿附會",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0155",
+      "idiom": "敷衍塞責",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0156",
+      "idiom": "暗箭傷人",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0157",
+      "idiom": "隨波逐流",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0158",
+      "idiom": "暴跳如雷",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0159",
+      "idiom": "優柔寡斷",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0160",
+      "idiom": "聲色俱厲",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0161",
+      "idiom": "華而不實",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0162",
+      "idiom": "利令智昏",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0163",
+      "idiom": "置之度外",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0164",
+      "idiom": "不修邊幅",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0165",
+      "idiom": "手無寸鐵",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0166",
+      "idiom": "玉石俱焚",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0167",
+      "idiom": "一手遮天",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0168",
+      "idiom": "七手八腳",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0169",
+      "idiom": "一觸即發",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0170",
+      "idiom": "心悅誠服",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0171",
+      "idiom": "改弦易轍",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0172",
+      "idiom": "兵連禍結",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0173",
+      "idiom": "出神入化",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0174",
+      "idiom": "居心叵測",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0175",
+      "idiom": "千方百計",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0176",
+      "idiom": "一帆風順",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0177",
+      "idiom": "大惑不解",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0178",
+      "idiom": "金蟬脫殼",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0179",
+      "idiom": "五花八門",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0180",
+      "idiom": "一貧如洗",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0181",
+      "idiom": "心安理得",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0182",
+      "idiom": "道貌岸然",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0183",
+      "idiom": "飛揚跋扈",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0184",
+      "idiom": "苦口婆心",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0185",
+      "idiom": "比比皆是",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0186",
+      "idiom": "顛沛流離",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0187",
+      "idiom": "雷厲風行",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0188",
+      "idiom": "十拿九穩",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0189",
+      "idiom": "寡廉鮮恥",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0190",
+      "idiom": "模稜兩可",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0191",
+      "idiom": "充耳不聞",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0192",
+      "idiom": "蠢蠢欲動",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0193",
+      "idiom": "聽天由命",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0194",
+      "idiom": "大腹便便",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0195",
+      "idiom": "聲名狼藉",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0196",
+      "idiom": "探囊取物",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0197",
+      "idiom": "處心積慮",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0198",
+      "idiom": "呆若木雞",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0199",
+      "idiom": "以鄰為壑",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0200",
+      "idiom": "言簡意賅",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0201",
+      "idiom": "積重難返",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0202",
+      "idiom": "標新立異",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0203",
+      "idiom": "來龍去脈",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0204",
+      "idiom": "櫛風沐雨",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0205",
+      "idiom": "所向披靡",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0206",
+      "idiom": "海底撈針",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0207",
+      "idiom": "栩栩如生",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0208",
+      "idiom": "惡貫滿盈",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0209",
+      "idiom": "朝秦暮楚",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0210",
+      "idiom": "斬草除根",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0211",
+      "idiom": "喜出望外",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0212",
+      "idiom": "花言巧語",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0213",
+      "idiom": "垂頭喪氣",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0214",
+      "idiom": "流連忘返",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0215",
+      "idiom": "隨機應變",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0216",
+      "idiom": "分庭抗禮",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0217",
+      "idiom": "應接不暇",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0218",
+      "idiom": "鞠躬盡瘁",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0219",
+      "idiom": "愛莫能助",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0220",
+      "idiom": "洗耳恭聽",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0221",
+      "idiom": "不勝枚舉",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0222",
+      "idiom": "不知所措",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0223",
+      "idiom": "美不勝收",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0224",
+      "idiom": "絕無僅有",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0225",
+      "idiom": "另眼相看",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0226",
+      "idiom": "隔岸觀火",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0227",
+      "idiom": "雷霆萬鈞",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0228",
+      "idiom": "巧奪天工",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0229",
+      "idiom": "萬紫千紅",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0230",
+      "idiom": "當機立斷",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0231",
+      "idiom": "綽綽有餘",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0232",
+      "idiom": "放蕩不羈",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0233",
+      "idiom": "漫不經心",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0234",
+      "idiom": "咎由自取",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0235",
+      "idiom": "醉生夢死",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0236",
+      "idiom": "豁然貫通",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0237",
+      "idiom": "夙興夜寐",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0238",
+      "idiom": "鉤心鬥角",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0239",
+      "idiom": "顛撲不破",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0240",
+      "idiom": "聲淚俱下",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0241",
+      "idiom": "老奸巨猾",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0242",
+      "idiom": "汗馬功勞",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0243",
+      "idiom": "千載一時",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0244",
+      "idiom": "光明磊落",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0245",
+      "idiom": "同病相憐",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0246",
+      "idiom": "生龍活虎",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0247",
+      "idiom": "同床異夢",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0248",
+      "idiom": "出其不意",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0249",
+      "idiom": "不知所云",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0250",
+      "idiom": "不言而喻",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0251",
+      "idiom": "不苟言笑",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0252",
+      "idiom": "大驚小怪",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0253",
+      "idiom": "手足無措",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0254",
+      "idiom": "屈指可數",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0255",
+      "idiom": "眉飛色舞",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0256",
+      "idiom": "洗心革面",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0257",
+      "idiom": "飛黃騰達",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0258",
+      "idiom": "紙醉金迷",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0259",
+      "idiom": "烏合之眾",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0260",
+      "idiom": "逆來順受",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0261",
+      "idiom": "啞口無言",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0262",
+      "idiom": "等量齊觀",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0263",
+      "idiom": "荒謬絕倫",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0264",
+      "idiom": "深惡痛絕",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0265",
+      "idiom": "殊途同歸",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0266",
+      "idiom": "千變萬化",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0267",
+      "idiom": "得不償失",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0268",
+      "idiom": "冥頑不靈",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0269",
+      "idiom": "望洋興嘆",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0270",
+      "idiom": "嬌生慣養",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0271",
+      "idiom": "養精蓄銳",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0272",
+      "idiom": "陽奉陰違",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0273",
+      "idiom": "懷才不遇",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0274",
+      "idiom": "連篇累牘",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0275",
+      "idiom": "並駕齊驅",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0276",
+      "idiom": "起死回生",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0277",
+      "idiom": "大名鼎鼎",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0278",
+      "idiom": "大智若愚",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0279",
+      "idiom": "錦囊妙計",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0280",
+      "idiom": "一目了然",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0281",
+      "idiom": "五光十色",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0282",
+      "idiom": "年高德劭",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0283",
+      "idiom": "快馬加鞭",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0284",
+      "idiom": "志同道合",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0285",
+      "idiom": "冷言冷語",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0286",
+      "idiom": "流言蜚語",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0287",
+      "idiom": "殺人越貨",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0288",
+      "idiom": "銳不可當",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0289",
+      "idiom": "錙銖必較",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0290",
+      "idiom": "苦心孤詣",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0291",
+      "idiom": "刻骨銘心",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0292",
+      "idiom": "深謀遠慮",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0293",
+      "idiom": "魂不附體",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0294",
+      "idiom": "入不敷出",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0295",
+      "idiom": "十全十美",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0296",
+      "idiom": "人山人海",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0297",
+      "idiom": "無微不至",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0298",
+      "idiom": "不遺餘力",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0299",
+      "idiom": "心平氣和",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0300",
+      "idiom": "心血來潮",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0301",
+      "idiom": "隨遇而安",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0302",
+      "idiom": "神通廣大",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0303",
+      "idiom": "孤苦伶仃",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0304",
+      "idiom": "名不副實",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0305",
+      "idiom": "爾虞我詐",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0306",
+      "idiom": "義正辭嚴",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0307",
+      "idiom": "改邪歸正",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0308",
+      "idiom": "顧此失彼",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0309",
+      "idiom": "言聽計從",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0310",
+      "idiom": "困獸猶鬥",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0311",
+      "idiom": "迥然不同",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0312",
+      "idiom": "如出一轍",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0313",
+      "idiom": "歡天喜地",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0314",
+      "idiom": "循規蹈矩",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0315",
+      "idiom": "唯唯諾諾",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0316",
+      "idiom": "孑然一身",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0317",
+      "idiom": "氣壯山河",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0318",
+      "idiom": "不同凡響",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0319",
+      "idiom": "骨瘦如柴",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0320",
+      "idiom": "理直氣壯",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0321",
+      "idiom": "星羅棋布",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0322",
+      "idiom": "依然故我",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0323",
+      "idiom": "大庭廣眾",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0324",
+      "idiom": "鬼使神差",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0325",
+      "idiom": "粗枝大葉",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0326",
+      "idiom": "相得益彰",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0327",
+      "idiom": "心如刀割",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0328",
+      "idiom": "心滿意足",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0329",
+      "idiom": "名列前茅",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0330",
+      "idiom": "失魂落魄",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0331",
+      "idiom": "粗茶淡飯",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0332",
+      "idiom": "躍然紙上",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0333",
+      "idiom": "見義勇為",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0334",
+      "idiom": "形單影隻",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0335",
+      "idiom": "養虎遺患",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0336",
+      "idiom": "憂心如焚",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0337",
+      "idiom": "搜索枯腸",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0338",
+      "idiom": "義無反顧",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0339",
+      "idiom": "坐立不安",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0340",
+      "idiom": "紛至沓來",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0341",
+      "idiom": "首屈一指",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0342",
+      "idiom": "形影不離",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0343",
+      "idiom": "一決雌雄",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0344",
+      "idiom": "厲兵秣馬",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0345",
+      "idiom": "禍起蕭牆",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0346",
+      "idiom": "縱虎歸山",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0347",
+      "idiom": "黨同伐異",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0348",
+      "idiom": "大喜過望",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0349",
+      "idiom": "響遏行雲",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0350",
+      "idiom": "涇渭分明",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0351",
+      "idiom": "破釜沉舟",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0352",
+      "idiom": "中庸之道",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0353",
+      "idiom": "一丘之貉",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0354",
+      "idiom": "班門弄斧",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0355",
+      "idiom": "水落石出",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0356",
+      "idiom": "名落孫山",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0357",
+      "idiom": "胸有成竹",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0358",
+      "idiom": "指鹿為馬",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0359",
+      "idiom": "天衣無縫",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0360",
+      "idiom": "江郎才盡",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0361",
+      "idiom": "口若懸河",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0362",
+      "idiom": "驚弓之鳥",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0363",
+      "idiom": "一敗塗地",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0364",
+      "idiom": "投筆從戎",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0365",
+      "idiom": "畫蛇添足",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0366",
+      "idiom": "望梅止渴",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0367",
+      "idiom": "司空見慣",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0368",
+      "idiom": "南轅北轍",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0369",
+      "idiom": "狼狽為奸",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0370",
+      "idiom": "狐假虎威",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0371",
+      "idiom": "為虎作倀",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0372",
+      "idiom": "如火如荼",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0373",
+      "idiom": "老馬識途",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0374",
+      "idiom": "一暴十寒",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0375",
+      "idiom": "守株待兔",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0376",
+      "idiom": "四面楚歌",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0377",
+      "idiom": "奇貨可居",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0378",
+      "idiom": "刻舟求劍",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0379",
+      "idiom": "後來居上",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0380",
+      "idiom": "負荊請罪",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0381",
+      "idiom": "對牛彈琴",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0382",
+      "idiom": "一鼓作氣",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0383",
+      "idiom": "紙上談兵",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0384",
+      "idiom": "破鏡重圓",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0385",
+      "idiom": "打草驚蛇",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0386",
+      "idiom": "揠苗助長",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0387",
+      "idiom": "一鳴驚人",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0388",
+      "idiom": "死灰復燃",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0389",
+      "idiom": "出奇制勝",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0390",
+      "idiom": "食古不化",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0391",
+      "idiom": "一日千里",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0392",
+      "idiom": "一諾千金",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0393",
+      "idiom": "騎虎難下",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0394",
+      "idiom": "投鼠忌器",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0395",
+      "idiom": "坐井觀天",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0396",
+      "idiom": "門可羅雀",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0397",
+      "idiom": "攀龍附鳳",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0398",
+      "idiom": "易如反掌",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0399",
+      "idiom": "膾炙人口",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0400",
+      "idiom": "趾高氣揚",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0401",
+      "idiom": "唾面自乾",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0402",
+      "idiom": "推心置腹",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0403",
+      "idiom": "病入膏肓",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0404",
+      "idiom": "蕭規曹隨",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0405",
+      "idiom": "庸人自擾",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0406",
+      "idiom": "緣木求魚",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0407",
+      "idiom": "雙管齊下",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0408",
+      "idiom": "一言九鼎",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0409",
+      "idiom": "自相矛盾",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0410",
+      "idiom": "舉案齊眉",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0411",
+      "idiom": "閉門造車",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0412",
+      "idiom": "歧路亡羊",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0413",
+      "idiom": "車水馬龍",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0414",
+      "idiom": "先發制人",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0415",
+      "idiom": "洛陽紙貴",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0416",
+      "idiom": "孤陋寡聞",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0417",
+      "idiom": "滿腹經綸",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0418",
+      "idiom": "飲鴆止渴",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0419",
+      "idiom": "退避三舍",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0420",
+      "idiom": "世外桃源",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0421",
+      "idiom": "水深火熱",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0422",
+      "idiom": "假公濟私",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0423",
+      "idiom": "孤掌難鳴",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0424",
+      "idiom": "偃旗息鼓",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0425",
+      "idiom": "妄自尊大",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0426",
+      "idiom": "得心應手",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0427",
+      "idiom": "乘風破浪",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0428",
+      "idiom": "滿城風雨",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0429",
+      "idiom": "敝帚自珍",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0430",
+      "idiom": "兔死狗烹",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0431",
+      "idiom": "拋磚引玉",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0432",
+      "idiom": "門庭若市",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0433",
+      "idiom": "殺身成仁",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0434",
+      "idiom": "一視同仁",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0435",
+      "idiom": "雪中送炭",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0436",
+      "idiom": "甘拜下風",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0437",
+      "idiom": "無地自容",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0438",
+      "idiom": "過河拆橋",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0439",
+      "idiom": "前倨後恭",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0440",
+      "idiom": "弄巧成拙",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0441",
+      "idiom": "噤若寒蟬",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0442",
+      "idiom": "瓜田李下",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0443",
+      "idiom": "望塵莫及",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0444",
+      "idiom": "半途而廢",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0445",
+      "idiom": "一籌莫展",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0446",
+      "idiom": "抱薪救火",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0447",
+      "idiom": "大器晚成",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0448",
+      "idiom": "莫逆之交",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0449",
+      "idiom": "按圖索驥",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0450",
+      "idiom": "強弩之末",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0451",
+      "idiom": "一網打盡",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0452",
+      "idiom": "蜀犬吠日",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0453",
+      "idiom": "曲突徙薪",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0454",
+      "idiom": "矯枉過正",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0455",
+      "idiom": "吳牛喘月",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0456",
+      "idiom": "居安思危",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0457",
+      "idiom": "賓至如歸",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0458",
+      "idiom": "不恥下問",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0459",
+      "idiom": "不可救藥",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0460",
+      "idiom": "河東獅吼",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0461",
+      "idiom": "手舞足蹈",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0462",
+      "idiom": "愛屋及烏",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0463",
+      "idiom": "不脛而走",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0464",
+      "idiom": "大義滅親",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0465",
+      "idiom": "越俎代庖",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0466",
+      "idiom": "水滴石穿",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0467",
+      "idiom": "炙手可熱",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0468",
+      "idiom": "因噎廢食",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0469",
+      "idiom": "草菅人命",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0470",
+      "idiom": "排難解紛",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0471",
+      "idiom": "如魚得水",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0472",
+      "idiom": "流芳百世",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0473",
+      "idiom": "眾志成城",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0474",
+      "idiom": "管中窺豹",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0475",
+      "idiom": "南柯一夢",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0476",
+      "idiom": "束之高閣",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0477",
+      "idiom": "忍辱負重",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0478",
+      "idiom": "臥薪嘗膽",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0479",
+      "idiom": "買櫝還珠",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0480",
+      "idiom": "不求甚解",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0481",
+      "idiom": "青黃不接",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0482",
+      "idiom": "自慚形穢",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0483",
+      "idiom": "急如星火",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0484",
+      "idiom": "背道而馳",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0485",
+      "idiom": "同舟共濟",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0486",
+      "idiom": "披星戴月",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0487",
+      "idiom": "相敬如賓",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0488",
+      "idiom": "鶴立雞群",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0489",
+      "idiom": "格格不入",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0490",
+      "idiom": "山窮水盡",
+      "suggestedStage": "國小",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0491",
+      "idiom": "功敗垂成",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0492",
+      "idiom": "旁若無人",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0493",
+      "idiom": "青梅竹馬",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0494",
+      "idiom": "五體投地",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0495",
+      "idiom": "強詞奪理",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0496",
+      "idiom": "投鞭斷流",
+      "suggestedStage": "高中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0497",
+      "idiom": "天花亂墜",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0498",
+      "idiom": "不速之客",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0499",
+      "idiom": "勢不兩立",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    },
+    {
+      "id": "I0500",
+      "idiom": "開誠布公",
+      "suggestedStage": "國中",
+      "textbookEvidence": "unverified",
+      "linguisticReview": "pending"
+    }
+  ]
+}

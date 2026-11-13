@@ -1,0 +1,6 @@
+_reference/
+.workpack-backups/
+.local/
+node_modules/
+*.log
+.DS_Store

@@ -1,0 +1,7 @@
+# 建議人工合併至倉庫根目錄 .gitignore（如已有規則需保留原內容）
+_reference/
+.workpack-backups/
+.DS_Store
+*.log
+# 正式可發布 data/idioms_500.json 需經核校與授權確認後才能提交。
+# 因其日後可能應納入 Pages，故此處刻意不忽略它。
