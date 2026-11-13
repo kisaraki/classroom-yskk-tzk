@@ -121,3 +121,9 @@ CI限制main及v*標籤，gh-pages不執行需要開發檔案的根目錄測試�
 新增「感測狀態」：本機顯示權限、事件數、有效資料、螢幕角度、控制方向及重新要求權限。授權視窗造成失焦時保留未完成請求，手動選搖桿仍可取消其影響。Start 同一次手勢發起請求。
 
 node --test tests/*.test.mjs codex-workpack/tests/*.test.mjs：82/82 PASS。verify-workpack PASS。新增 input.test.mjs 覆蓋五種螢幕角度、四方向、兩種 iPad 身分與 Android、姿態投影、旋轉清除校正、授權失焦和錯誤診斷。尚待 iPad 實機重測，不宣稱 A29 通過。五關配置與 500 條 PENDING 資料不變；僅更新使用者已授權的平板測試網站，非正式發布。
+
+### 2026-11-14 第二次實機回報：iPad 角度基準
+
+上一版仍異常，使用者確認以平放桌面校正。查得 WebKit 260984@main（2023-03-01）將 iPad Screen Orientation 的自然方向設為 landscape-primary：https://github.com/WebKit/WebKit/commit/f0224968ed57e28fcf80825627817e4e435231eb 。因此原 angle() 把 screen.orientation.angle 直接當成感測器直向座標的角度不成立；上一版測試只使用直向自然基準，未涵蓋此組合。
+
+iOS 改用與感測器同基準的 window.orientation；缺少時由 Screen Orientation type 轉為直向基準。Android 保留原生角度。新增四姿態、兩種角度來源的回歸測試。診斷顯示控制版本 20261114.2、實際轉換角度及兩種 API 原始角度；入口及更新模組附版本查詢參數避免沿用舊快取。實機方向仍待使用者重測，不宣稱已通過。

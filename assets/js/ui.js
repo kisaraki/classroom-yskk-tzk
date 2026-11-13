@@ -28,9 +28,9 @@ export function sensorMessage(input){
   const states={unknown:'尚未要求',requesting:'等待回覆',granted:'已允許',denied:'未允許','not-required':'不需此授權 API',unavailable:'瀏覽器未提供此 API',error:'請求失敗'};
   const permission=key=>{const p=input.permission[key]||{state:'unknown'};return (states[p.state]||String(p.state))+(p.error?`（${p.error}）`:'');};
   const age=Number.isFinite(input.lastValid)?`${Math.max(0,Math.round(input.now()-input.lastValid))} 毫秒前`:'尚未收到';
-  return `安全連線：${input.host.isSecureContext===true?'是（HTTPS）':input.host.isSecureContext===false?'否':'未知'}\n`+
+  return `控制版本：20261114.2\n安全連線：${input.host.isSecureContext===true?'是（HTTPS）':input.host.isSecureContext===false?'否':'未知'}\n`+
     `動作權限：${permission('DeviceMotionEvent')}\n方向權限：${permission('DeviceOrientationEvent')}\n`+
     `動作事件：${input.eventCounts.motion} 次\n方向事件：${input.eventCounts.orientation} 次\n有效資料：${input.eventCounts.valid} 次\n`+
-    `最近有效資料：${age}\n螢幕角度：${input.angle()}°\n資料來源：${input.source||'尚無'}\n`+
+    `最近有效資料：${age}\n感測器轉換角度：${input.angle()}°\n螢幕原始角度：${input.host.screen?.orientation?.angle??'未提供'}°\n裝置角度：${input.host.orientation??'未提供'}°\n資料來源：${input.source||'尚無'}\n`+
     `方向（右／下為正）：${input.filtered.x.toFixed(2)} / ${input.filtered.y.toFixed(2)}\n控制狀態：${input.modeMessage}`;
 }

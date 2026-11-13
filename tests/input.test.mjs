@@ -56,3 +56,18 @@ test('denied and failed permission requests are distinguishable in diagnostics',
  assert.equal(await input.requestTilt(),false);assert.equal(input.mode,'joystick');
  assert.match(sensorMessage(input),/動作權限：未允許/);assert.match(sensorMessage(input),/NotAllowedError/);
 });
+
+test('iPad landscape natural screen origin must not replace portrait sensor origin',()=>{
+ for(const [type,screenAngle,legacy,right] of [
+  ['landscape-primary',0,90,[0,-3]],['landscape-secondary',180,-90,[0,3]],
+  ['portrait-primary',90,0,[3,0]],['portrait-secondary',270,180,[-3,0]],
+ ])for(const useLegacy of [true,false]){
+  const host={navigator:{platform:'MacIntel',maxTouchPoints:5},screen:{orientation:{type,angle:screenAngle}},performance:{now:()=>0}};
+  if(useLegacy)host.orientation=legacy;
+  const input=new InputController(host);input.setMode('tilt');input.motion({accelerationIncludingGravity:{x:0,y:0}});
+  for(let i=0;i<30;i++)input.motion({accelerationIncludingGravity:{x:right[0],y:right[1]}});
+  assert.ok(input.gravity().x>.7,`${type}, legacy=${useLegacy}`);assert.equal(input.gravity().y,0);
+ }
+ const android=new InputController({navigator:{platform:'Linux'},screen:{orientation:{type:'landscape-primary',angle:0}},orientation:90});
+ assert.equal(android.angle(),0,'Android retains its native natural sensor origin');
+});
