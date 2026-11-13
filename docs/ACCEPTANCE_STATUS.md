@@ -2,7 +2,7 @@
 
 2026-11-13。依工作包ACCEPTANCE_MATRIX逐項整理，工作包原件不改動。PASS只指表列範圍；PARTIAL是已有部分證據但尚未滿足完整門檻。整體仍不可正式發布。
 
-最新測試：node --test tests/*.test.mjs codex-workpack/tests/*.test.mjs，76/76 PASS，0 skipped、0 todo。來源：tests/game.test.mjs、ui.test.mjs、robustness.test.mjs、server.test.mjs與工作包測試。測試資料均非正式語文簽核。
+最新測試：node --test tests/*.test.mjs codex-workpack/tests/*.test.mjs，77/77 PASS，0 skipped、0 todo。來源：tests/game.test.mjs、ui.test.mjs、robustness.test.mjs、server.test.mjs與工作包測試。測試資料均非正式語文簽核。
 
 |項目|狀態|現有證據與缺口|
 |---|---|---|
@@ -43,7 +43,7 @@
 |A37 正式資料與內容簽核|BLOCKED|待審匯入結構有效，尚無正式資料及簽核|
 |A38 人工語文與授權|BLOCKED|官方來源已記錄，500條人工核校未完成|
 |A39 特定教材收錄|NOT_APPLICABLE|不主張任何出版社或冊次收錄|
-|A40 Pages子路徑|PARTIAL|本地HTTP及瀏覽器子路徑載入500條並啟動遊戲，授權PDF亦200；未部署遠端|
+|A40 Pages子路徑|PASS|https://kisaraki.github.io/classroom-yskk-tzk/ 測試版部署成功；HTML/JS/JSON/PDF均200，瀏覽器完成載入500條、Start、倒數及暫停|
 |A41–A42 平板實機|BLOCKED|無iPadOS Safari及Android Chrome實測證據|
 |A43 完整五關結算|PARTIAL|純邏輯全五關通過、摘要含重試紀錄；桌面無error/warn，完整人工遊玩未測|
 

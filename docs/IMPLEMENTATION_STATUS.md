@@ -99,3 +99,15 @@ renderer.js：尺寸未變時不重設Canvas繪圖緩衝區；提供ResizeObserv
 首輪GitHub Actions驗證成功：https://github.com/kisaraki/classroom-yskk-tzk/actions/runs/43436310997 。verify含工作包檢查、44項契約及32項遊戲測試；release-check依一般push規則略過，並不代表發布核准。
 
 依遠端Node 20 Actions棄用提示，查核官方[checkout v7.0.1](https://github.com/actions/checkout/releases/tag/v7.0.1)與[setup-node v7.1.0](https://github.com/actions/setup-node/releases/tag/v7.1.0)，僅更新根目錄實際工作流並固定官方commit SHA，使用Node 24、ubuntu-24.04；工作包範本及manifest保持不變。待第二輪遠端確認。
+
+## 使用者授權的GitHub Pages平板測試版
+
+使用者要求啟用Pages並提供平板測試網址。GitHub起初422回覆目前方案不支援私有倉庫Pages；準備19個必要網站檔案後，使用者明確選擇將現有classroom-yskk-tzk改為公開。已完成可見性變更並推送gh-pages分支。這是先前僅本機待審資料規則的明確指定例外，不代表正式語文核校。
+
+新增site-config.js與stage-tablet-test.mjs。main保持production模式，輸出副本使用tablet-test並讀取data/idioms_tablet_test.json；原始500條內容及PENDING狀態逐位元組保留。部署只含19個網站檔案，無_reference、工作包、測試、簽核人員表或備份。網站顯示「平板測試版 · 題庫待核校 · 非正式教學」，保持完整來源及授權PDF。正式check-release不變。
+
+本地77/77測試PASS；來源提交d3c7a38遠端CI成功：https://github.com/kisaraki/classroom-yskk-tzk/actions/runs/43438847769 。Pages提交b71a439部署成功：https://github.com/kisaraki/classroom-yskk-tzk/actions/runs/43438861551 。GitHub Pages API確認來源gh-pages、根目錄、https_enforced=true。
+
+正式提供的平板操作測試網址：https://kisaraki.github.io/classroom-yskk-tzk/ 。實際HTTP驗證首頁、site-config.js、500條PENDING JSON、授權PDF皆200且MIME正確。公開網址瀏覽器驗證載入500條、玩家01、Start、3秒倒數、遊戲計時與暫停成功；error/warn為空。證據：.local/qa/github-pages-live.png。尚未把桌面瀏覽器驗證宣稱為iPad／Android實機完成。
+
+CI限制main及v*標籤，gh-pages不執行需要開發檔案的根目錄測試流程。網站分支獨立更新，main變更不會暗中重部署待審資料。

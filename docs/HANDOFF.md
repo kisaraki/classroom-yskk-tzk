@@ -27,7 +27,7 @@ node tools/prepare-review.mjs --data ./_reference/idioms_500_pending_2020_202609
 
 ## 裝置驗收（需要可操作的實機）
 
-完整項目見`codex-workpack/docs/QA_DEVICE_MATRIX.md`；請在正式資料核校完成後的受控測試環境進行，使用支援感測器授權的HTTPS頁面。未核校題庫仍限本機隔離預覽。
+完整項目見`codex-workpack/docs/QA_DEVICE_MATRIX.md`；請在正式資料核校完成後的受控測試環境進行，使用支援感測器授權的HTTPS頁面。使用者已另行授權上述Pages待核校操作測試版；正式核校及實機證據仍不可省略。
 
 每款至少記錄裝置型號、OS／瀏覽器版本、時間、網址及截圖或影片：
 
@@ -37,9 +37,9 @@ node tools/prepare-review.mjs --data ./_reference/idioms_500_pending_2020_202609
 4. READY、PLAYING、IDIOM_CLEAR切背景、旋轉、系統提示；回前景不自動恢復、計時及進度不損失。
 5. 連續完成五關；確認19題、76次命中、錯序不加分、重字分序、A每關三次、R重抽及結算重試紀錄。
 
-## GitHub與發布（目前未部署）
+## GitHub與測試部署
 
-經使用者明確要求，已在登入帳號kisaraki建立新的私有倉庫：https://github.com/kisaraki/classroom-yskk-tzk 。先前404為歷史紀錄；目前改以此新倉庫進行遠端整合。尚未啟用Pages或發布待審題庫。
+使用者已明確同意將倉庫 https://github.com/kisaraki/classroom-yskk-tzk 改為公開，並要求Pages平板測試。測試網址：https://kisaraki.github.io/classroom-yskk-tzk/ 。gh-pages分支僅包含網站必要檔案，資料仍為PENDING，非正式教學／核准發布。此為先前僅本機規則的指定例外。
 
 已準備`.github/workflows/idioms-pinball-ci.yml`：一般push/PR執行驗證；v*標籤及指定手動執行要求嚴格發布檢查。它不自動部署；遠端執行結果見IMPLEMENTATION_STATUS.md。
 

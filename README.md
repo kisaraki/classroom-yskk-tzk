@@ -1,5 +1,7 @@
 # 成語彈珠臺
 
+平板測試網址：https://kisaraki.github.io/classroom-yskk-tzk/ 。以iPad Safari或Android Chrome橫向開啟；題庫待人工核校，僅供操作測試。
+
 原生 ES Modules + Canvas 的五關成語遊戲，無框架、CDN、安裝或建置需求。正式規格為 codex-workpack/CODEX_SPEC.md v1.3。
 
 ## 本地啟動
@@ -22,7 +24,7 @@ node tools/serve.mjs --preview-data ./_reference/idioms_500_pending_2020_2026092
 
 `node codex-workpack/tools/check-release.mjs`
 
-正式題庫及人工簽核尚未完成，因此發布檢查預期失敗。GitHub 私有倉庫已建立於 https://github.com/kisaraki/classroom-yskk-tzk ，尚未部署；iPadOS、Android實機未測。瀏覽器畫面與感測器方向仍須實際驗收。
+正式題庫及人工簽核尚未完成，因此發布檢查預期失敗。GitHub 倉庫已依使用者指示改為公開，gh-pages分支已部署平板測試版；iPadOS、Android實機未測。瀏覽器畫面與感測器方向仍須實際驗收。
 
 所有網站資源使用相對路徑；可用 http://127.0.0.1:4173/classroom-yskk-tzk/?preview=1 驗證專案子路徑。發布時只提供 index.html、assets/ 和已審核 data/，不得包含 _reference、測試夾具或私人備份。
 
@@ -43,4 +45,4 @@ node tools/serve.mjs --preview-data ./_reference/idioms_500_pending_2020_2026092
 node tools/stage-tablet-test.mjs --data ./_reference/idioms_500_pending_2020_20260929.json --output ./.local/tablet-pages-next
 ```
 
-僅將輸出的網站檔案更新到gh-pages分支，不可把專案根目錄整份當作Pages輸出。題庫不改為APPROVED，完整署名與官方授權說明仍須保留。網站部署結果及網址見開發紀錄。
+僅將輸出的網站檔案更新到gh-pages分支，不可把專案根目錄整份當作Pages輸出。題庫不改為APPROVED，完整署名與官方授權說明仍須保留。測試網址：https://kisaraki.github.io/classroom-yskk-tzk/ 。網站由gh-pages根目錄部署，main提交不會自動更新測試網站。
