@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+<defs>
+ <linearGradient id="paper" x2="0" y2="1"><stop stop-color="#f3edda"/><stop offset="1" stop-color="#d7dfca"/></linearGradient>
+ <linearGradient id="wash" x2="0" y2="1"><stop stop-color="#617b70" stop-opacity=".6"/><stop offset="1" stop-color="#e3e5d4" stop-opacity=".1"/></linearGradient>
+ <filter id="ink"><feTurbulence type="fractalNoise" baseFrequency=".014" numOctaves="3" seed="8"/><feDisplacementMap in="SourceGraphic" scale="13"/></filter>
+ <g id="pine"><path d="M0 0 Q-8-80 4-175 M-2-68L-42-108 M1-102L43-135" fill="none" stroke="#314e43" stroke-width="7"/><g fill="#3b5c4b"><path d="M4-190l-44 44 30-6-53 38 51-8-60 42 68-14 70 4-53-32 45 5-43-35 27 2z"/><path d="M-41-123l-35 29 30-4-45 31 63-12 30-1z"/></g></g>
+ <g id="bamboo" fill="none" stroke="#345a47"><path d="M0 0Q15-160-8-350M38 0Q15-130 38-280" stroke-width="7"/><path d="M-5-70l18-2M-3-140l17-2M-3-210l14-2M-8-280l12-2M30-90l12 1M29-180l13 1" stroke="#8c9d79" stroke-width="3"/><g fill="#345a47" stroke="none"><path d="M0-220q-80-90-85-35 48-5 85 35M0-220q55-100 80-78-29 48-80 78M0-160q-70-55-96-45 40 36 96 45M30-110q70-65 99-40-52 16-99 40M30-240q-45-60-77-48 31 34 77 48M30-240q45-75 74-63-27 44-74 63"/></g></g>
+</defs>
+<path fill="url(#paper)" d="M0 0h1600v1000H0z"/>
+<circle cx="1130" cy="210" r="83" fill="#d8b77b" opacity=".45"/>
+<g fill="url(#wash)" filter="url(#ink)"><path d="M0 590 130 380 210 440 370 190 430 315 500 260 620 480 730 330 860 580 1000 320 1060 420 1190 260 1370 510 1470 350 1600 520v480H0z"/><path d="M0 720 180 550 300 650 470 440 600 670 750 530 950 750 1190 510 1320 650 1500 480 1600 660v340H0z"/></g>
+<g fill="none" stroke="#627a69" stroke-width="3" opacity=".22"><path d="m370 210-30 210-85 142m85-142 40 80m810-210-50 205-100 90m50-70 90 45M470 460l-30 160 60 50"/></g>
+<path d="M0 855q230-140 430-10t430 15q240-95 740-60v200H0" fill="#9eaf95" opacity=".45"/>
+<path d="M0 944q300-50 660-17t940-44" fill="none" stroke="#f4edda" stroke-width="44" opacity=".65"/>
+<g opacity=".7"><use href="#pine" transform="translate(140 840) scale(1.7)"/><use href="#pine" transform="translate(260 870) scale(1.1)"/><use href="#pine" transform="translate(65 880) scale(1.3)"/><use href="#pine" transform="translate(1450 810) scale(1.6)"/><use href="#pine" transform="translate(1535 850) scale(1.2)"/></g>
+<g transform="translate(1110 790)" stroke="#4c5a49" fill="none"><path d="M-75 0h150M-50 0v-69M50 0v-69M-54-57h108M-38 0v-50M38 0v-50" stroke-width="5"/><path d="M-90-65q50 0 90-48 40 48 90 48-85 23-180 0" fill="#51624f" stroke-width="3"/><path d="M-72 7H72" stroke-width="7"/></g>
+<g opacity=".65"><use href="#bamboo" transform="translate(20 1000) scale(1.5)"/><use href="#bamboo" transform="translate(1580 1000) scale(-1.3 1.3)"/></g>
+<g fill="none" stroke="#536656" stroke-width="3" opacity=".6"><path d="M820 255q14-12 27 0 12-10 25-2M905 280q11-8 20 0 10-9 20-3M850 300q9-9 18 0 10-7 18-2"/></g>
+</svg>
