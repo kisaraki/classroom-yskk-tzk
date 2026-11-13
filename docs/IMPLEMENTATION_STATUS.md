@@ -111,3 +111,13 @@ renderer.js：尺寸未變時不重設Canvas繪圖緩衝區；提供ResizeObserv
 正式提供的平板操作測試網址：https://kisaraki.github.io/classroom-yskk-tzk/ 。實際HTTP驗證首頁、site-config.js、500條PENDING JSON、授權PDF皆200且MIME正確。公開網址瀏覽器驗證載入500條、玩家01、Start、3秒倒數、遊戲計時與暫停成功；error/warn為空。證據：.local/qa/github-pages-live.png。尚未把桌面瀏覽器驗證宣稱為iPad／Android實機完成。
 
 CI限制main及v*標籤，gh-pages不執行需要開發檔案的根目錄測試流程。網站分支獨立更新，main變更不會暗中重部署待審資料。
+
+## 2026-11-14 感測方向與診斷修正
+
+使用者回報 iPad mini 7 / iPadOS 26 Safari 已能取得感測器，但橫向滾動方向不符預期。查核 WebKit WebCoreMotionManager.mm：iOS 將 Core Motion userAcceleration + gravity 直接傳入 accelerationIncludingGravity，與 W3C 示範的符號不同。input.js 現在依 iOS 身分（含 MacIntel + 多點觸控的 iPad 桌面網站模式）正規化符號，再使用原有螢幕座標轉換；方向事件備援改成重力投影，避免直接旋轉 Euler 角造成姿態失真。舊版 Safari orientationchange 同樣清除舊校正並暫停。
+
+來源：https://github.com/WebKit/WebKit/blob/main/Source/WebCore/platform/ios/WebCoreMotionManager.mm ；https://www.w3.org/TR/orientation-event/ 。這是程式與來源核對，並非已取得使用者裝置上的原始讀值證據。
+
+新增「感測狀態」：本機顯示權限、事件數、有效資料、螢幕角度、控制方向及重新要求權限。授權視窗造成失焦時保留未完成請求，手動選搖桿仍可取消其影響。Start 同一次手勢發起請求。
+
+node --test tests/*.test.mjs codex-workpack/tests/*.test.mjs：82/82 PASS。verify-workpack PASS。新增 input.test.mjs 覆蓋五種螢幕角度、四方向、兩種 iPad 身分與 Android、姿態投影、旋轉清除校正、授權失焦和錯誤診斷。尚待 iPad 實機重測，不宣稱 A29 通過。五關配置與 500 條 PENDING 資料不變；僅更新使用者已授權的平板測試網站，非正式發布。

@@ -23,3 +23,14 @@ export function sourceMessage(dataset){
   const attribution=official?`中華民國教育部（Ministry of Education, R.O.C.）。《成語典》（版本編號：${dataset.sourceEdition||'未提供'}）網址：http://dict.idioms.moe.edu.tw/\n`:'';
   return attribution+(dataset.legalAttribution||'來源與授權資訊尚待確認。');
 }
+
+export function sensorMessage(input){
+  const states={unknown:'尚未要求',requesting:'等待回覆',granted:'已允許',denied:'未允許','not-required':'不需此授權 API',unavailable:'瀏覽器未提供此 API',error:'請求失敗'};
+  const permission=key=>{const p=input.permission[key]||{state:'unknown'};return (states[p.state]||String(p.state))+(p.error?`（${p.error}）`:'');};
+  const age=Number.isFinite(input.lastValid)?`${Math.max(0,Math.round(input.now()-input.lastValid))} 毫秒前`:'尚未收到';
+  return `安全連線：${input.host.isSecureContext===true?'是（HTTPS）':input.host.isSecureContext===false?'否':'未知'}\n`+
+    `動作權限：${permission('DeviceMotionEvent')}\n方向權限：${permission('DeviceOrientationEvent')}\n`+
+    `動作事件：${input.eventCounts.motion} 次\n方向事件：${input.eventCounts.orientation} 次\n有效資料：${input.eventCounts.valid} 次\n`+
+    `最近有效資料：${age}\n螢幕角度：${input.angle()}°\n資料來源：${input.source||'尚無'}\n`+
+    `方向（右／下為正）：${input.filtered.x.toFixed(2)} / ${input.filtered.y.toFixed(2)}\n控制狀態：${input.modeMessage}`;
+}

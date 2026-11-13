@@ -1,4 +1,4 @@
-import {setText,progressMessage,summaryMessage,sourceMessage} from './ui.js';
+import {setText,progressMessage,summaryMessage,sourceMessage,sensorMessage} from './ui.js';
 import {SITE_MODE} from './site-config.js';
 import {LEVELS} from './config.js';
 import {loadDataset} from './idioms.js';
@@ -29,17 +29,19 @@ async function load(){
  finally{loading=false;$('retry-data').disabled=false;enableStart();}
 }
 $('retry-data').addEventListener('click',load);load();
-function pause(reason){permissionInterrupted=busy||permissionInterrupted;game?.pause(reason);input.clear();clock.reset();}
-function showDialog(title,text,action=null){pause('確認操作');$('source-links').hidden=true;setText($('dialog-title'),title);setText($('dialog-text'),text);$('confirm').onclick=()=>{$('dialog').close();action?.();clock.reset();};$('cancel').hidden=!action;$('dialog').showModal();}
+function pause(reason){permissionInterrupted=busy||permissionInterrupted;game?.pause(reason);input.clear({cancelRequest:false});clock.reset();}
+function showDialog(title,text,action=null){pause('確認操作');$('source-links').hidden=true;$('sensor-status').hidden=true;$('sensor-retry').hidden=true;setText($('dialog-title'),title);setText($('dialog-text'),text);$('confirm').onclick=()=>{$('dialog').close();action?.();clock.reset();};$('cancel').hidden=!action;$('dialog').showModal();}
 $('cancel').onclick=()=>$('dialog').close();
+$('sensor-info').onclick=()=>{showDialog('感測狀態','請直接用 Safari 開啟 HTTPS 測試網址。按下方按鈕重新要求權限，若出現詢問請選允許；再輕輕傾斜平板，觀察有效資料是否增加。此處資訊只顯示在本機，不會上傳。');$('sensor-status').hidden=false;$('sensor-retry').hidden=false;setText($('sensor-status'),sensorMessage(input));};
+$('sensor-retry').onclick=()=>input.requestTilt();
 $('about').onclick=()=>{showDialog('玩法與資料來源','依序碰撞第1至第4字，只有「我」直接撞中才算完成。\nP 暫停；R 全部重來；A 每關最多重試3次。\n傾斜控制不可用時，可隨時拖曳左下搖桿。\nSafari 無法全螢幕時可使用「加入主畫面」。\n\n'+sourceMessage(dataset)+'\n'+(preview?'目前使用待審原始資料，不能作為正式教學或發布驗收。':''));$('source-links').hidden=!dataset?.items.some(item=>item.source==='moe-idioms-public-dictionary');};
 $('start').onclick=async()=>{
  if(busy||!dataset||!validName(name))return;busy=true;permissionInterrupted=false;enableStart();
  const playerName=name.trim(),gameItems=dataset.items;
- const access=requestStartAccess();
+ const access=requestStartAccess(globalThis,2200,()=>input.requestTilt());
  try{await access;
    lockLandscape();
-   game=new Game(gameItems);game.start(playerName);input.setMode('tilt');$('home').hidden=true;$('game').hidden=false;renderer.resize();
+   game=new Game(gameItems);game.start(playerName);$('home').hidden=true;$('game').hidden=false;renderer.resize();
    if(permissionInterrupted||document.hidden||!landscape())game.pause('準備完成，按繼續開始');
  }catch(error){setText($('data-status'),`無法開始：${error.message}`);}finally{busy=false;enableStart();clock.reset();}
 };
@@ -48,12 +50,13 @@ $('restart').onclick=()=>showDialog('全部重新開始？','將返回第1關，
 $('retry').onclick=()=>{if(!game||game.attemptsUsed>=3)return;showDialog('重新挑戰本關？',`本關時間與進度重設，題組及配置不變。還可使用 ${3-game.attemptsUsed} 次。`,()=>game.retry(true));};
 $('continue').onclick=()=>{if(game.status==='PAUSED')game.resume({visible:!document.hidden,landscape:landscape()});else if(game.status==='LEVEL_CLEAR')game.nextLevel();else if(game.status==='LEVEL_FAILED')$('retry').click();else if(game.status==='GAME_CLEAR')$('restart').click();clock.reset();input.clear();};
 $('mode').onclick=()=>{if(input.mode==='tilt'||input.tiltPending){input.setMode('joystick');return;}pause('切換控制方式後，按繼續');input.requestTilt();};
-$('calibrate').onclick=()=>{pause('校正後，按繼續');const ok=input.calibrate();if(!ok){input.setMode('joystick');game.pauseReason='尚無有效感測器資料，請使用搖桿';}else game.pauseReason='水平已校正，按繼續';};
+$('calibrate').onclick=()=>{pause('校正後，按繼續');const ok=input.calibrate();if(!ok){input.setMode('joystick');game.pauseReason='尚無有效感測器資料，請按上方「感測狀態」檢查權限並重試；也可使用搖桿';}else game.pauseReason='水平已校正，按繼續';};
 document.addEventListener('visibilitychange',()=>{if(document.hidden)pause('已切到背景，按繼續恢復');});
 window.addEventListener('pagehide',()=>pause('已離開頁面'));window.addEventListener('blur',()=>pause('已離開遊戲視窗'));
 matchMedia('(orientation:landscape)').addEventListener('change',()=>{pause('方向已變更，按繼續恢復');input.resetOrientation();});
 screen.orientation?.addEventListener('change',()=>{pause('握持方向已變更，請重新校正');input.resetOrientation();});
-function drawUI(){if(!game)return;if(document.documentElement.style.getPropertyValue('--accent')!==game.level.color)document.documentElement.style.setProperty('--accent',game.level.color);
+if(!screen.orientation)window.addEventListener('orientationchange',()=>{pause('握持方向已變更，請重新校正');input.resetOrientation();});
+function drawUI(){if(!$('sensor-status').hidden){setText($('sensor-status'),sensorMessage(input));$('sensor-retry').disabled=input.tiltPending;}if(!game)return;if(document.documentElement.style.getPropertyValue('--accent')!==game.level.color)document.documentElement.style.setProperty('--accent',game.level.color);
  setText($('player-label'),game.name);setText($('level-label'),`第${game.level.level}關 · ${game.level.name}`);setText($('question-label'),`成語 ${game.idiomIndex+1}/${game.level.idiomsRequired}`);
  setText($('timer'),`${Math.ceil(game.remaining)} 秒`);setText($('retry'),`A × ${3-game.attemptsUsed}`);$('retry').disabled=game.attemptsUsed>=3||['LEVEL_CLEAR','GAME_CLEAR'].includes(game.status);
  setText($('pause'),game.status==='PAUSED'?'P 繼續':'P 暫停');setText($('control-mode'),input.modeMessage);
