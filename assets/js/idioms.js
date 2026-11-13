@@ -28,12 +28,12 @@ export function choose19(items,seed) {
   }
   return groups;
 }
-export async function loadDataset(preview=false,{fetchImpl=globalThis.fetch}={}){
-  const path=preview?'./__preview/idioms.json':'./data/idioms_500.json';
+export async function loadDataset(preview=false,{fetchImpl=globalThis.fetch,tabletTest=false}={}){
+  const path=tabletTest?'./data/idioms_tablet_test.json':preview?'./__preview/idioms.json':'./data/idioms_500.json';
   let response;
   try{response=await fetchImpl(path,{cache:'no-store',signal:AbortSignal.timeout(10000)});}
   catch{throw new Error('題庫連線失敗或逾時，請按「重新載入」再試。');}
   if(!response.ok)throw new Error(preview?'尚未提供本地預覽題庫。':'正式題庫尚未就緒，請稍後重試。');
   let data;try{data=await response.json();}catch{throw new Error('題庫檔案不是有效的 JSON，請檢查資料後重新載入。');}
-  validateDataset(data,{preview});return data;
+  validateDataset(data,{preview:preview||tabletTest});return data;
 }

@@ -32,3 +32,15 @@ node tools/serve.mjs --preview-data ./_reference/idioms_500_pending_2020_2026092
 人工核校閱讀包已產生於 `_reference/review-20261113/REVIEW_PACKET.md`，對應簽核表維持空白。完整接手步驟、裝置測試與發布前門檻見 [docs/HANDOFF.md](docs/HANDOFF.md)；最新逐項驗收見 [docs/ACCEPTANCE_STATUS.md](docs/ACCEPTANCE_STATUS.md)。
 
 `.github/workflows/idioms-pinball-ci.yml` 已準備本地／遠端開發檢查及嚴格發布檢查；不會自動發布；遠端檢查結果另記於開發紀錄。
+
+## GitHub Pages 平板測試版
+
+依使用者明確指示，倉庫改為公開，gh-pages分支用於平板操作測試；這是先前僅本機預覽規則的指定例外。題庫仍PENDING，網站顯示「平板測試版 · 題庫待核校 · 非正式教學」。main預設正式模式與check-release不變。
+
+以新輸出資料夾準備網站（拒絕覆寫既有目錄）：
+
+```powershell
+node tools/stage-tablet-test.mjs --data ./_reference/idioms_500_pending_2020_20260929.json --output ./.local/tablet-pages-next
+```
+
+僅將輸出的網站檔案更新到gh-pages分支，不可把專案根目錄整份當作Pages輸出。題庫不改為APPROVED，完整署名與官方授權說明仍須保留。網站部署結果及網址見開發紀錄。

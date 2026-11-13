@@ -1,4 +1,5 @@
 import {setText,progressMessage,summaryMessage,sourceMessage} from './ui.js';
+import {SITE_MODE} from './site-config.js';
 import {LEVELS} from './config.js';
 import {loadDataset} from './idioms.js';
 import {Game,FixedClock} from './state.js';
@@ -6,11 +7,12 @@ import {mountKeyboard,validName} from './keyboard.js';
 import {InputController} from './input.js';
 import {requestStartAccess,lockLandscape} from './startup.js';
 import {Renderer} from './renderer.js';
-const $=id=>document.getElementById(id),preview=['localhost','127.0.0.1','[::1]'].includes(location.hostname)&&new URLSearchParams(location.search).get('preview')==='1';
+const $=id=>document.getElementById(id),tabletTest=SITE_MODE==='tablet-test',preview=tabletTest||(['localhost','127.0.0.1','[::1]'].includes(location.hostname)&&new URLSearchParams(location.search).get('preview')==='1');
 let game=null,dataset=null,name='',busy=false,lastIdiom=null,lastIndex=-1,lastStatus='',lastFeedback=0,permissionInterrupted=false,keyboardReady=false,loading=false;
 const clock=new FixedClock(),input=new InputController(),renderer=new Renderer($('canvas'));input.attach($('joystick'));
 const landscape=()=>matchMedia('(orientation:landscape)').matches;
 if(preview)setText($('environment'),'本地開發預覽 · 題庫待核校 · 不可發布');
+if(tabletTest)setText($('environment'),'平板測試版 · 題庫待核校 · 非正式教學');
 for(const level of LEVELS){const el=document.createElement('span');el.style.setProperty('--level',level.color);el.textContent=`${level.level} ${level.name} · ${level.durationSeconds}秒 / ${level.idiomsRequired}題`;$('levels').append(el);}
 function enableStart(){$('start').disabled=!dataset||!validName(name)||busy;$('retry-data').disabled=loading||busy;}
 async function load(){
@@ -22,7 +24,7 @@ async function load(){
    catch{throw new Error('鍵盤設定載入失敗，請按「重新載入」再試。');}
    mountKeyboard($('keyboard'),presets,value=>{name=value;enableStart();});keyboardReady=true;
   }
-  dataset=await loadDataset(preview);setText($('data-status'),preview?`${dataset.count}條待審資料 · 僅本地驗證玩法`:'題庫已就緒');
+  dataset=await loadDataset(preview,{tabletTest});setText($('data-status'),preview?`${dataset.count}條待審資料 · ${tabletTest?'僅供平板操作測試':'僅本地驗證玩法'}`:'題庫已就緒');
  }catch(error){setText($('data-status'),error.message);}
  finally{loading=false;$('retry-data').disabled=false;enableStart();}
 }
