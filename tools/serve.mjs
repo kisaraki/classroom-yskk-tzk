@@ -3,7 +3,7 @@ import {readFile,realpath} from 'node:fs/promises';
 import {resolve,extname,relative,isAbsolute} from 'node:path';
 import {fileURLToPath} from 'node:url';
 const projectRoot=fileURLToPath(new URL('..',import.meta.url));
-const types={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.pdf':'application/pdf'};
+const types={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.png':'image/png','.svg':'image/svg+xml','.pdf':'application/pdf'};
 const within=(base,file)=>{const rel=relative(base,file);return rel!==''&&!isAbsolute(rel)&&rel!=='..'&&!rel.startsWith('../')&&!rel.startsWith('..\\');};
 export function createLocalServer({base=projectRoot,preview=null}={}){
  base=resolve(base);
