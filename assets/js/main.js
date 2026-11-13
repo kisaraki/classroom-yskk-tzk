@@ -1,10 +1,10 @@
-import {setText,progressMessage,summaryMessage,sourceMessage,sensorMessage} from './ui.js';
+import {setText,progressMessage,summaryMessage,sourceMessage,sensorMessage} from './ui.js?v=20261114.2';
 import {SITE_MODE} from './site-config.js';
 import {LEVELS} from './config.js';
 import {loadDataset} from './idioms.js';
 import {Game,FixedClock} from './state.js';
 import {mountKeyboard,validName} from './keyboard.js';
-import {InputController} from './input.js';
+import {InputController} from './input.js?v=20261114.2';
 import {requestStartAccess,lockLandscape} from './startup.js';
 import {Renderer} from './renderer.js';
 const $=id=>document.getElementById(id),tabletTest=SITE_MODE==='tablet-test',preview=tabletTest||(['localhost','127.0.0.1','[::1]'].includes(location.hostname)&&new URLSearchParams(location.search).get('preview')==='1');

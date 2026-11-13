@@ -22,7 +22,17 @@ export class InputController{
     this.permission={};this.eventCounts={motion:0,orientation:0,valid:0};
   }
   now(){return this.host.performance?.now()??Date.now();}
-  angle(){return this.host.screen?.orientation?.angle??this.host.orientation??0;}
+  angle(){
+    // iPad Screen Orientation uses a landscape natural origin, whereas its
+    // motion axes and legacy window.orientation use the portrait origin.
+    if(motionPolarity(this.host)===1){
+      if(Number.isFinite(this.host.orientation))return this.host.orientation;
+      const portraitAngles={'portrait-primary':0,'landscape-primary':90,'portrait-secondary':180,'landscape-secondary':270};
+      const angle=portraitAngles[this.host.screen?.orientation?.type];
+      if(angle!==undefined)return angle;
+    }
+    return this.host.screen?.orientation?.angle??this.host.orientation??0;
+  }
   accept(x,y,source,now=this.now()){
     if(!Number.isFinite(x)||!Number.isFinite(y))return false;
     const raw=screenVector(x,y,this.angle());
