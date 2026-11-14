@@ -37,7 +37,5 @@ export function mountKeyboard(root,presets,onChange){
   function press(key){field.value=editName(field.value,key);sync();}
   for(const key of '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ-')root.append(button(key,()=>press(key)));
   root.append(button('空白',()=>press('space'),'key-wide'),button('⌫ 刪除',()=>press('delete'),'key-wide'),button('清除',()=>press('clear'),'key-wide'));
-  const names=document.querySelector('#preset-names');
-  for(const name of presets.presetNames)names.append(button(name,()=>{field.value=name;sync();},'preset'));
   sync();return {getValue:()=>field.value.trim()};
 }
