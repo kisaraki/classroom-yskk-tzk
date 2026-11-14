@@ -15,17 +15,29 @@ export function validatePresets(presets){
 }
 export function mountKeyboard(root,presets,onChange){
   validatePresets(presets);
-  let value='',mode='latin';const display=document.querySelector('#player-name'),counter=document.querySelector('#name-length');
-  function renderValue(){display.textContent=value||'點選下方鍵盤輸入';display.classList.toggle('empty',!value);counter.textContent=`${graphemes(value).length}/16`;onChange(value);}
-  function button(label,action,className=''){const b=document.createElement('button');b.type='button';b.textContent=label;b.className=className;b.addEventListener('click',action);return b;}
-  function keys(){root.replaceChildren();
-    const list=mode==='latin'?Array.from('1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ-'):presets.commonCharacters;
-    for(const key of list)root.append(button(key,()=>{value=editName(value,key);renderValue();}));
-    root.append(button('空白',()=>{value=editName(value,'space');renderValue();},'key-wide'),button('⌫ 刪除',()=>{value=editName(value,'delete');renderValue();},'key-wide'),button('清除',()=>{value='';renderValue();},'key-wide'));
+  const field=document.querySelector('#player-name'),counter=document.querySelector('#name-length');
+  let composing=false;
+  function sync(){
+    const letters=graphemes(field.value);
+    if(!composing&&letters.length>16)field.value=letters.slice(0,16).join('');
+    counter.textContent=graphemes(field.value).length+'/16';
+    onChange(composing?'':field.value);
   }
-  for(const tab of document.querySelectorAll('[data-keyboard-mode]'))tab.addEventListener('click',()=>{
-    mode=tab.dataset.keyboardMode;for(const t of document.querySelectorAll('[data-keyboard-mode]'))t.setAttribute('aria-selected',String(t===tab));keys();
+  field.addEventListener('compositionstart',()=>{composing=true;sync();});
+  field.addEventListener('compositionend',()=>{composing=false;sync();});
+  field.addEventListener('input',sync);
+  field.addEventListener('keydown',event=>{
+    if(event.key==='Enter'&&!composing&&!event.isComposing){event.preventDefault();field.blur();}
   });
-  const names=document.querySelector('#preset-names');for(const name of presets.presetNames)names.append(button(name,()=>{value=graphemes(name).slice(0,16).join('');renderValue();},'preset'));
-  keys();renderValue();return {getValue:()=>value.trim()};
+  function button(label,action,className=''){
+    const b=document.createElement('button');
+    b.type='button';b.textContent=label;b.className=className;b.addEventListener('click',action);
+    return b;
+  }
+  function press(key){field.value=editName(field.value,key);sync();}
+  for(const key of '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ-')root.append(button(key,()=>press(key)));
+  root.append(button('空白',()=>press('space'),'key-wide'),button('⌫ 刪除',()=>press('delete'),'key-wide'),button('清除',()=>press('clear'),'key-wide'));
+  const names=document.querySelector('#preset-names');
+  for(const name of presets.presetNames)names.append(button(name,()=>{field.value=name;sync();},'preset'));
+  sync();return {getValue:()=>field.value.trim()};
 }
