@@ -17,7 +17,7 @@ test('500 seeded layouts retain exact object kinds, unique distractors and safe 
  }
 });
 
-test('full 960 seconds of simulated physics remain finite and inside walls with immobile posts',()=>{
+test('full 910 seconds of simulated physics remain finite and inside walls with immobile posts',()=>{
  for(const level of LEVELS){
   const world=createWorld(level,idiom,123);const posts=world.bodies.filter(b=>!b.inverseMass).map(b=>({id:b.id,x:b.x,y:b.y}));
   for(let i=0;i<level.durationSeconds/P.dt;i++){
