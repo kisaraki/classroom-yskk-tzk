@@ -1,4 +1,4 @@
-import {requestPermissions} from './input.js?v=20261114.2';
+import {requestPermissions} from './input.js?v=20261114.5';
 
 function attempt(action){
   try{return Promise.resolve(action()).then(()=>true,()=>false);}

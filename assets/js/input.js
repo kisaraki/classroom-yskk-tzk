@@ -80,7 +80,7 @@ export class InputController{
     const signal=(this.abort=new AbortController()).signal;
     this.host.addEventListener('devicemotion',e=>this.motion(e),{signal});this.host.addEventListener('deviceorientation',e=>this.orientation(e),{signal});
     const movement=['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','a','w','s','d'];
-    this.host.addEventListener('keydown',e=>{const key=e.key.length===1?e.key.toLowerCase():e.key;if(movement.includes(key)&&!e.target.closest?.('dialog')){e.preventDefault();if(this.mode!=='joystick'||this.tiltPending)this.setMode('joystick');this.keys.add(key);}},{signal});
+    this.host.addEventListener('keydown',e=>{const key=e.key.length===1?e.key.toLowerCase():e.key;if(movement.includes(key)&&!e.target.closest?.('dialog,input,textarea,[contenteditable]')){e.preventDefault();if(this.mode!=='joystick'||this.tiltPending)this.setMode('joystick');this.keys.add(key);}},{signal});
     this.host.addEventListener('keyup',e=>this.keys.delete(e.key.length===1?e.key.toLowerCase():e.key),{signal});
     this.host.addEventListener('blur',()=>this.clear({cancelRequest:false}),{signal});
     let pointer=null;const knob=joystick.querySelector('.joystick-knob');

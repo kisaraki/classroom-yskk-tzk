@@ -8,7 +8,14 @@ header{background:#f7f1e4e8;border-bottom:1px solid #a49676;gap:12px}header stro
 @media(max-height:800px){.organizers{margin-top:10px;padding-top:5px;padding-bottom:5px}.organizers p{font-size:12px}.orbit{margin:12px 0}h1{font-size:46px}.intro .hint{margin-top:8px}}
 @media(max-height:650px){#home{padding:8px 3%;align-items:center}.name-card{padding:10px}h1{font-size:36px;margin:8px 0}.orbit{margin:8px 0}.orbit i{width:42px;height:42px;font-size:23px}.intro>p{margin:8px 0}.organizers{margin-top:8px}#levels span{font-size:11px}.name-row{margin:6px 0;padding:8px;min-height:48px}#keyboard{margin:6px 0}header span{font-size:11px}}
 /* Guanyin coastal scroll: complete artwork remains visible beside the keyboard. */
-body{background-image:linear-gradient(#f6efdfda,#f6efdfda),url('../art/guanyin-scroll.png')}
+body{background-image:linear-gradient(#f6efdfda,#f6efdfda),url('../art/guanyin-scroll-v2.png')}
 #home{background:none;gap:3%;grid-template-columns:1.05fr 1fr}.intro>small{letter-spacing:3px}.intro h1{font-size:clamp(30px,3.3vw,45px);letter-spacing:2px;margin:8px 0;white-space:nowrap}.intro>p{font-size:13px;margin:6px 0;line-height:1.6}.guanyin-scroll{margin:12px 0;background:#eee3cd;border:1px solid #b4a080;padding:5px;box-shadow:0 6px 20px #4f3e2422}.guanyin-scroll img{display:block;width:100%;height:auto;max-height:310px;object-fit:contain}.guanyin-scroll figcaption{font-size:11px;text-align:center;line-height:1.6;color:#5c533d;padding-top:4px}.organizers p{font-size:12px}.organizers{margin-top:10px}.intro .hint{margin-top:6px}
 @media(max-height:800px){.guanyin-scroll{margin:8px 0}.guanyin-scroll img{max-height:260px}.intro h1{font-size:36px}#levels span{font-size:12px}}
 @media(max-height:680px){.guanyin-scroll img{max-height:185px}.intro h1{font-size:30px}.guanyin-scroll{margin:6px 0}.intro>p{font-size:12px;line-height:1.4}.organizers{margin-top:6px}.intro .hint{font-size:11px}}
+.name-card label{display:block;margin:6px 0;font-size:13px}
+.name-row{align-items:center;gap:10px;padding:8px 12px}
+#player-name{flex:1;min-width:0;width:100%;font:inherit;font-size:18px;color:inherit;background:transparent;border:0;padding:6px 0;touch-action:manipulation;user-select:text}
+#player-name:focus-visible{outline:2px solid #71634a;outline-offset:2px}
+#name-length{flex-shrink:0}
+#joystick{background:#d8fbff;border:3px solid #00adc5;box-shadow:0 0 0 2px #003746}
+.joystick-knob{background:#00e5ff;border:2px solid #004751;box-shadow:0 0 10px #00d7ef99}
