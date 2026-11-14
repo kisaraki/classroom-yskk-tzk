@@ -1,4 +1,5 @@
 import { PHYSICS as P,seededRandom } from './config.js';
+import {LEVEL_DAMPING} from './daylight.js?v=20261114.8';
 export function body(id,kind,x,y,extra={}) {
   const fixed=kind.endsWith('Post');
   return {id,kind,x,y,vx:0,vy:0,radius:kind==='player'?P.playerRadius:P.radius,mass:1,inverseMass:fixed?0:1,restitution:P.restitution,active:true,...extra};
@@ -18,7 +19,7 @@ export function createWorld(level,idiom,seed){
     if(item.inverseMass){item.vx=(random()-.5)*70;item.vy=(random()-.5)*70;}
     bodies.push(item);
   }
-  return {bodies,width:P.width,height:P.height,stepId:0,lastContacts:new Map()};
+  return {bodies,damping:LEVEL_DAMPING[level.level-1]??P.damping,width:P.width,height:P.height,stepId:0,lastContacts:new Map()};
 }
 export function resolvePair(a,b){
   let dx=b.x-a.x,dy=b.y-a.y,distance=Math.hypot(dx,dy),r=a.radius+b.radius;
@@ -44,7 +45,7 @@ export function step(world,dt,gravity){
   const norm=Math.max(1,Math.hypot(gx,gy));
   for(const b of active){
     if(!b.inverseMass){b.vx=0;b.vy=0;continue;}
-    b.vx=(b.vx+gx/norm*P.acceleration*dt)*Math.exp(-P.damping*dt);b.vy=(b.vy+gy/norm*P.acceleration*dt)*Math.exp(-P.damping*dt);
+    b.vx=(b.vx+gx/norm*P.acceleration*dt)*Math.exp(-(world.damping??P.damping)*dt);b.vy=(b.vy+gy/norm*P.acceleration*dt)*Math.exp(-(world.damping??P.damping)*dt);
     const speed=Math.hypot(b.vx,b.vy);if(speed>P.maxSpeed){b.vx*=P.maxSpeed/speed;b.vy*=P.maxSpeed/speed;}
     b.x+=b.vx*dt;b.y+=b.vy*dt;wall(b,world.width,world.height);
   }

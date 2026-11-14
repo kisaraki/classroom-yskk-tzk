@@ -2,12 +2,12 @@ import {setText,progressMessage,summaryMessage,sourceMessage} from './ui.js?v=20
 import {SITE_MODE} from './site-config.js';
 import {LEVELS} from './config.js';
 import {loadDataset} from './idioms.js';
-import {Game,FixedClock} from './state.js?v=20261114.7';
+import {Game,FixedClock} from './state.js?v=20261114.8';
 import {mountKeyboard,validName} from './keyboard.js?v=20261114.5';
 import {InputController} from './input.js?v=20261114.5';
 import {requestStartAccess,lockLandscape} from './startup.js?v=20261114.5';
-import {Renderer} from './renderer.js?v=20261114.6';
-import {DAYLIGHT} from './daylight.js';
+import {Renderer} from './renderer.js?v=20261114.8';
+import {DAYLIGHT,gateProgress} from './daylight.js?v=20261114.8';
 const $=id=>document.getElementById(id),tabletTest=SITE_MODE==='tablet-test',preview=tabletTest||(['localhost','127.0.0.1','[::1]'].includes(location.hostname)&&new URLSearchParams(location.search).get('preview')==='1');
 let game=null,dataset=null,name='',busy=false,lastIdiom=null,lastIndex=-1,lastStatus='',lastFeedback=0,permissionInterrupted=false,keyboardReady=false,loading=false;
 const clock=new FixedClock(),input=new InputController(),renderer=new Renderer($('canvas'));input.attach($('joystick'));
@@ -57,6 +57,10 @@ if(!screen.orientation)window.addEventListener('orientationchange',()=>{pause('�
 function drawUI(){
  if(!game)return;
  const theme=DAYLIGHT[game.levelIndex];
+ const ready=game.status==='READY';
+ $('gate').hidden=!ready;
+ $('gate').style.setProperty('--gate-open',gateProgress(game.readyRemaining));
+ $('overlay').classList.toggle('gate-ready',ready);
  const style=document.documentElement.style;
  if(style.getPropertyValue('--accent')!==theme.color)style.setProperty('--accent',theme.color);
  setText($('player-label'),game.name);setText($('level-label'),`第${game.level.level}關 · ${theme.name}`);setText($('question-label'),`成語 ${game.idiomIndex+1}/${game.level.idiomsRequired}`);
@@ -78,4 +82,4 @@ function drawUI(){
  if(game.feedback&&game.feedback.serial!==lastFeedback){lastFeedback=game.feedback.serial;if($('sound').checked){try{const audio=new (window.AudioContext||window.webkitAudioContext)(),osc=audio.createOscillator(),gain=audio.createGain();osc.frequency.value=game.feedback.type==='correct'?660:220;gain.gain.value=.04;osc.connect(gain);gain.connect(audio.destination);osc.start();osc.stop(audio.currentTime+.09);osc.onended=()=>audio.close().catch(()=>{});}catch{}}}
  if(lastStatus!==game.status){lastStatus=game.status;clock.reset();}
 }
-let previous=performance.now();function frame(now){const delta=(now-previous)/1000;previous=now;const gravity=input.gravity(now);if(game&&!document.hidden&&landscape())clock.advance(delta,dt=>game.tick(dt,gravity));drawUI();if(game)renderer.draw(game);requestAnimationFrame(frame);}requestAnimationFrame(frame);
+let previous=performance.now();function frame(now){const delta=(now-previous)/1000;previous=now;const gravity=input.gravity(now);if(game&&!document.hidden&&landscape())clock.advance(delta,dt=>game.tick(dt,gravity));drawUI();if(game)renderer.draw(game,now);requestAnimationFrame(frame);}requestAnimationFrame(frame);
