@@ -6,7 +6,7 @@ import {Game,FixedClock} from './state.js';
 import {mountKeyboard,validName} from './keyboard.js?v=20261114.5';
 import {InputController} from './input.js?v=20261114.5';
 import {requestStartAccess,lockLandscape} from './startup.js?v=20261114.5';
-import {Renderer} from './renderer.js?v=20261114.5'
+import {Renderer} from './renderer.js?v=20261114.6';
 import {DAYLIGHT} from './daylight.js';
 const $=id=>document.getElementById(id),tabletTest=SITE_MODE==='tablet-test',preview=tabletTest||(['localhost','127.0.0.1','[::1]'].includes(location.hostname)&&new URLSearchParams(location.search).get('preview')==='1');
 let game=null,dataset=null,name='',busy=false,lastIdiom=null,lastIndex=-1,lastStatus='',lastFeedback=0,permissionInterrupted=false,keyboardReady=false,loading=false;
