@@ -1,4 +1,4 @@
-import { LEVELS,PHYSICS as P,TIMING,mixSeed,newSeed } from './config.js';
+import { LEVELS,PHYSICS as P,TIMING,mixSeed,newSeed } from './config.js?v=20261114.11';
 import { choose19 } from './idioms.js';
 import { createWorld,step } from './physics.js?v=20261114.8';
 import { classifyContact,progressView } from './collision.js';
