@@ -34,3 +34,11 @@ export function sensorMessage(input){
     `最近有效資料：${age}\n感測器轉換角度：${input.angle()}°\n螢幕原始角度：${input.host.screen?.orientation?.angle??'未提供'}°\n裝置角度：${input.host.orientation??'未提供'}°\n資料來源：${input.source||'尚無'}\n`+
     `方向（右／下為正）：${input.filtered.x.toFixed(2)} / ${input.filtered.y.toFixed(2)}\n控制狀態：${input.modeMessage}`;
 }
+
+export function resultStats(game){
+ const recorded=game.summaries.some(s=>s.level===game.level.level);
+ const completed=game.summaries.reduce((n,s)=>n+s.idioms.length,0)+(recorded?0:game.completed.length);
+ const mistakes=game.summaries.reduce((n,s)=>n+s.mistakes,0)+(recorded?0:game.mistakes)+game.retryHistory.reduce((n,r)=>n+r.mistakes,0);
+ return {completed,cleared:game.summaries.length,mistakes,retries:game.retryHistory.length,remaining:Math.ceil(game.remaining)};
+}
+export function controlLabel(input){return input.tiltPending?'◌ 搖桿模式 · 等待感測授權':input.mode==='tilt'?'▱ 平板傾斜模式':'✥ 搖桿模式';}
