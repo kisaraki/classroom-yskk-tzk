@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {setText,progressMessage,summaryMessage} from '../assets/js/ui.js';
+import {setText,progressMessage,summaryMessage,resultStats,controlLabel} from '../assets/js/ui.js';
 
 test('live-region text changes only when its displayed value changes',()=>{
  let text='',writes=0;const element={get textContent(){return text;},set textContent(value){writes++;text=value;}};
@@ -21,4 +21,17 @@ test('final summary includes completed idioms and individual retry records',()=>
  const g={summaries:[{level:1,remaining:100.1,mistakes:2,attempts:1,idioms:['日日夜夜']}],retryHistory:[{level:1,attempt:1,remaining:20.5,mistakes:5}]};
  const text=summaryMessage(g);assert.match(text,/日日夜夜/);assert.match(text,/剩餘101秒/);assert.match(text,/第1關第1次重試 · 重試前剩餘21秒／失誤5次/);
  g.retryHistory=[];assert.match(summaryMessage(g),/本次挑戰未使用重試/);
+});
+
+test('result totals include partial failed levels and retries without double-counting a cleared level',()=>{
+ const game={level:{level:2},summaries:[{level:1,idioms:['甲','乙'],mistakes:2}],completed:['丙'],mistakes:3,retryHistory:[{mistakes:4}],remaining:0};
+ assert.deepEqual(resultStats(game),{completed:3,cleared:1,mistakes:9,retries:1,remaining:0});
+ game.summaries.push({level:2,idioms:['丙','丁','戊'],mistakes:3});game.completed=['丙','丁','戊'];game.remaining=10.1;
+ assert.deepEqual(resultStats(game),{completed:5,cleared:2,mistakes:9,retries:1,remaining:11});
+});
+
+test('control labels distinguish active tilt, joystick and pending permission',()=>{
+ assert.match(controlLabel({mode:'tilt'}),/平板傾斜模式/);
+ assert.match(controlLabel({mode:'joystick'}),/搖桿模式/);
+ assert.match(controlLabel({mode:'joystick',tiltPending:true}),/等待感測授權/);
 });
