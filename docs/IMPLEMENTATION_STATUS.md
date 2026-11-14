@@ -149,3 +149,6 @@ iOS 改用與感測器同基準的 window.orientation；缺少時由 Screen Orie
 ### 撞錯字扣時（20261114.7）
 
 依使用者新增規則，玩家球每次直接撞到未輪到的目標字或干擾字，剩餘時間減 5 秒，最低為零。沿用物理接觸去重，維持原有完成與逾時的結算優先順序。此規則更新規格 v1.3 §3.4 的不額外扣秒條款，工作包保留原始規格與雜湊。
+
+## 2026-11-14 Ocean edition (20261114.8)
+User-requested presentation override: vivid ocean palette, animated homepage, three exact organizer/motto declarations, opening school gates tied to READY countdown, and progressively reduced damping (.95/.75/.55/.35/.18). Contract level times/counts/colors remain stored unchanged. Morning/noon use new daylight art with separately rendered sun; levels 4/5 use sunset art. Reduced-motion preference disables decorative motion and substitutes gate fading. 86/86 tests and verify-workpack passed. Desktop visual inspection was blocked by Computer Use URL identification; no iPad visual or touch acceptance claimed. Formal language review remains PENDING; deployment uses the previously authorized tablet-test exception.

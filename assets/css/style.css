@@ -19,3 +19,23 @@ body{background-image:linear-gradient(#f6efdfda,#f6efdfda),url('../art/guanyin-c
 #name-length{flex-shrink:0}
 #joystick{background:#d8fbff;border:3px solid #00adc5;box-shadow:0 0 0 2px #003746}
 .joystick-knob{background:#00e5ff;border:2px solid #004751;box-shadow:0 0 10px #00d7ef99}
+/* Ocean edition: painted Guanyin landmarks, bright water and an opening school gate. */
+body{background:#dff6ff;color:#123e60}
+header{background:#effcffed;border-bottom:2px solid #7dd9ed}
+h1,.intro h1{color:#075e96}h1 span{color:#008c92}.intro>small,.intro>p,.hint{color:#245d78}
+#home{position:relative;isolation:isolate;background:radial-gradient(ellipse at 15% 80%,#5cdded80,transparent 60%),linear-gradient(135deg,#f1fdff,#bde9ff)}
+#home::before,#home::after{content:'';position:absolute;pointer-events:none;z-index:-1;width:120%;height:160px;left:-10%;bottom:-100px;border-radius:45%;background:#008ee533;animation:ocean-sway 9s ease-in-out infinite alternate}
+#home::after{bottom:-115px;background:#00c8b344;animation-delay:-4s}
+.name-card{background:#ffffffed;border:2px solid #8edce9;border-radius:24px;box-shadow:0 15px 35px #0075d922;animation:arrive .8s ease-out}.name-card::before{border:0}
+.name-row{background:#e6f6ff;border:1px solid #91cfeb;border-radius:12px}button{border-radius:12px;border-color:#a4cee5;background:#f8fdff}.primary{background:#0075d9;border-color:#0075d9;box-shadow:0 4px 0 #0056a1}.primary:hover{background:#008cbb}
+.guanyin-scroll{position:relative;overflow:hidden;background:#dbf9ff;border:2px solid #68cada;border-radius:18px;box-shadow:0 8px 25px #0075d933;animation:arrive 1s ease-out}.guanyin-scroll::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 30%,#ffffff55 48%,transparent 65%);transform:translateX(-110%);animation:sea-glint 9s ease-in-out infinite}.guanyin-scroll figcaption{color:#215d75}
+#levels span{border-radius:8px;background:#ffffffa8;color:#164967}.organizers{border-left:3px solid #00a2b0;color:#194f6d}.organizers .motto{color:#00699b;letter-spacing:3px;font-weight:800}
+#game{background:linear-gradient(130deg,#effcff,color-mix(in srgb,var(--accent) 20%,white))}.hud{border-top:4px solid var(--accent)}.board{border-radius:22px;border-width:4px;box-shadow:0 5px 18px #005e8b30}#cards>div{border-radius:14px;border-color:#95cde2}#cards .CURRENT{box-shadow:0 0 0 2px var(--accent);background:#fff8cf}#cards .COMPLETED{background:#bdf7e6;border-color:#18b59a}
+#overlay{z-index:3;background:#052f55d9}#overlay.gate-ready{background:transparent;pointer-events:none;text-shadow:0 2px 7px #00243f}#overlay.gate-ready>div{background:#063c66db;border:1px solid #c3f8ff;border-radius:20px;padding:15px 28px}#overlay.gate-ready h2{font-size:48px}
+#gate{position:absolute;inset:0;z-index:2;perspective:900px;overflow:hidden;pointer-events:none;--gate-open:0}
+.gate-leaf{position:absolute;top:0;bottom:0;width:50%;background:repeating-linear-gradient(90deg,transparent 0 23px,#d3ddeb 24px 29px,#4e6e8b 30px 33px),linear-gradient(#173d5de8,#072f4ff5);border:8px solid #bed5e5;box-shadow:inset 0 0 35px #001b35,0 0 20px #00162c;display:grid;place-items:center;backface-visibility:hidden}
+.gate-left{left:0;transform-origin:left;transform:rotateY(calc(var(--gate-open)*-100deg))}.gate-right{right:0;transform-origin:right;transform:rotateY(calc(var(--gate-open)*100deg))}.gate-leaf span{writing-mode:vertical-rl;font:700 30px 'DFKai-SB',serif;letter-spacing:10px;color:#ffdf81;background:#852f38;padding:20px 10px;border:2px solid #edc36b;border-radius:5px}
+.gate-pillar{position:absolute;top:5%;bottom:0;width:24px;background:linear-gradient(90deg,#712d38,#b06062,#662c35);border-top:14px solid #e2d5b3}.pillar-left{left:0}.pillar-right{right:0}
+@keyframes ocean-sway{to{transform:translate(4%,-20px) rotate(3deg)}}@keyframes sea-glint{0%,60%{transform:translateX(-110%)}100%{transform:translateX(110%)}}@keyframes arrive{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@media(max-height:800px){.guanyin-scroll img{max-height:235px}.organizers p{line-height:1.5}}@media(max-height:680px){.guanyin-scroll img{max-height:160px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important}.gate-left,.gate-right{transform:none;opacity:calc(1 - var(--gate-open))}}
