@@ -3,7 +3,7 @@ import {SITE_MODE} from './site-config.js';
 import {LEVELS} from './config.js';
 import {loadDataset} from './idioms.js';
 import {Game,FixedClock} from './state.js?v=20261114.8';
-import {mountKeyboard,validName} from './keyboard.js?v=20261114.5';
+import {mountKeyboard,validName} from './keyboard.js?v=20261114.10';
 import {InputController} from './input.js?v=20261114.5';
 import {requestStartAccess,lockLandscape} from './startup.js?v=20261114.5';
 import {Renderer} from './renderer.js?v=20261114.8';
