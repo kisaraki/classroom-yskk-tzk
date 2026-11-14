@@ -2,6 +2,7 @@ import { LEVELS,PHYSICS as P,TIMING,mixSeed,newSeed } from './config.js';
 import { choose19 } from './idioms.js';
 import { createWorld,step } from './physics.js';
 import { classifyContact,progressView } from './collision.js';
+const WRONG_HIT_PENALTY_SECONDS = 5;
 export class Game {
   constructor(items){this.items=items;this.status='HOME';this.revision=0;this.feedback=null;this.effects=[];}
   get level(){return LEVELS[this.levelIndex];}
@@ -40,9 +41,10 @@ export class Game {
         this.effects.push({x:result.body.x,y:result.body.y,char:result.body.char,life:.5});
         this.feedback={type:'correct',text:`✓ 已碰撞「${result.body.char}」`,serial:++this.revision,life:1};
         if(this.nextIndex===4){this.status='IDIOM_CLEAR';this.clearRemaining=TIMING.idiomClear;break;}
-      }else if(!collected){
+      }else{
         this.mistakes++;result.body.flash=.35;
-        this.feedback={type:'wrong',text:`請先碰第 ${this.nextIndex+1} 字「${Array.from(this.idiom.idiom)[this.nextIndex]}」`,serial:++this.revision,life:1.1};
+        this.remaining=Math.max(0,this.remaining-WRONG_HIT_PENALTY_SECONDS);
+        this.feedback={type:'wrong',text:`扣 ${WRONG_HIT_PENALTY_SECONDS} 秒 · 請先碰第 ${this.nextIndex+1} 字「${Array.from(this.idiom.idiom)[this.nextIndex]}」`,serial:++this.revision,life:1.1};
       }
     }
   }

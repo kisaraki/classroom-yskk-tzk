@@ -126,3 +126,29 @@ test('fourth-hit absorption continues during clear transition but freezes when p
  g.pause();const effects=structuredClone(g.effects);g.tick(1);assert.deepEqual(g.effects,effects);
  g.resume();g.tick(.45);assert.equal(g.effects.length,0);assert.equal(g.status,'IDIOM_CLEAR');
 });
+
+test('wrong targets and distractors cost five seconds, sustained contact and correct hits do not',()=>{
+ const g=new Game(items);g.start('扣時測試',64);g.tick(3);
+ const player=g.world.bodies[0];
+ const touch=target=>{Object.assign(player,{x:target.x,y:target.y,vx:0,vy:0});g.tick(P.dt);};
+ const wrong=g.world.bodies.find(b=>b.charIndex===2);
+ const right=g.world.bodies.find(b=>b.charIndex===0);
+ const distractor=g.world.bodies.find(b=>b.kind==='distractorPost');
+ const before=g.remaining;
+ touch(wrong);
+ assert.ok(Math.abs(g.remaining-(before-5-P.dt))<1e-9);
+ assert.match(g.feedback.text,/扣 5 秒/);
+ const after=g.remaining;
+ touch(wrong);
+ assert.ok(Math.abs(g.remaining-(after-P.dt))<1e-9);
+ const beforeCorrect=g.remaining;
+ touch(right);
+ assert.equal(g.nextIndex,1);
+ assert.ok(Math.abs(g.remaining-(beforeCorrect-P.dt))<1e-9);
+ g.remaining=4;
+ touch(distractor);
+ assert.equal(g.mistakes,2);
+ assert.equal(g.remaining,0);
+ assert.equal(g.status,'LEVEL_FAILED');
+ assert.equal(g.nextIndex,1);
+});

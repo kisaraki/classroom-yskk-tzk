@@ -2,7 +2,7 @@ import {setText,progressMessage,summaryMessage,sourceMessage} from './ui.js?v=20
 import {SITE_MODE} from './site-config.js';
 import {LEVELS} from './config.js';
 import {loadDataset} from './idioms.js';
-import {Game,FixedClock} from './state.js';
+import {Game,FixedClock} from './state.js?v=20261114.7';
 import {mountKeyboard,validName} from './keyboard.js?v=20261114.5';
 import {InputController} from './input.js?v=20261114.5';
 import {requestStartAccess,lockLandscape} from './startup.js?v=20261114.5';
@@ -31,7 +31,7 @@ $('retry-data').addEventListener('click',load);load();
 function pause(reason){permissionInterrupted=busy||permissionInterrupted;game?.pause(reason);input.clear({cancelRequest:false});clock.reset();}
 function showDialog(title,text,action=null){pause('確認操作');$('source-links').hidden=true;setText($('dialog-title'),title);setText($('dialog-text'),text);$('confirm').onclick=()=>{$('dialog').close();action?.();clock.reset();};$('cancel').hidden=!action;$('dialog').showModal();}
 $('cancel').onclick=()=>$('dialog').close();
-$('about').onclick=()=>{showDialog('玩法與資料來源','依序碰撞第1至第4字，只有玩家球直接撞中才算完成。\nP 暫停；R 全部重來；A 每關最多重試3次。\n傾斜控制不可用時，可隨時拖曳左下搖桿。\nSafari 無法全螢幕時可使用「加入主畫面」。\n\n'+sourceMessage(dataset));$('source-links').hidden=!dataset?.items.some(item=>item.source==='moe-idioms-public-dictionary');};
+$('about').onclick=()=>{showDialog('玩法與資料來源','依序碰撞第1至第4字，只有玩家球直接撞中才算完成。撞到未輪到的目標字或干擾字，每次扣 5 秒。\nP 暫停；R 全部重來；A 每關最多重試3次。\n傾斜控制不可用時，可隨時拖曳左下搖桿。\nSafari 無法全螢幕時可使用「加入主畫面」。\n\n'+sourceMessage(dataset));$('source-links').hidden=!dataset?.items.some(item=>item.source==='moe-idioms-public-dictionary');};
 $('start').onclick=async()=>{
  if(busy||!dataset||!validName(name))return;busy=true;permissionInterrupted=false;enableStart();
  const playerName=name.trim(),gameItems=dataset.items;
