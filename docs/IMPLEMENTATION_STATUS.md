@@ -159,3 +159,7 @@ Validation: 88/88 complete Node tests passed; subsequent UI tests 5/5 and workpa
 
 ## 2026-11-14 Level timing (20261114.11)
 User explicitly changed levels 1 and 2 to 200 seconds each. Current durations: 200/200/180/180/150 (910 seconds total). Runtime and contract comparison test now apply this approved exception; historical workpack remains unchanged.
+
+## 2026-11-15 Display guidance, glass rendering and QR (20261115.1)
+Fullscreen requires a user gesture and orientation lock is browser-dependent (MDN requestFullscreen/ScreenOrientation.lock). Added entry yes/no tutorial choice, explicit bounded fullscreen/orientation request with truthful outcome reporting, and Safari Add to Home Screen instructions. Portrait homepage is accessible; gameplay still requires landscape. Calibration explicitly requires a flat level tabletop. Added radial glass lighting, specular highlights, fixed-post bases and reflective board rim. Homepage QR enlarges in a dialog; generated and decoded to https://kisaraki.github.io/classroom-yskk-tzk/ with qrcode/zxing-cpp.
+Validation: 90/90 Node tests, workpack verification. Headless Chrome 1133x744 verified entry yes/no, tutorial, QR dialog, game startup, timeout and full 19-idiom simulation, return home, zero runtime errors; local screenshots inspected. Device-specific fullscreen, orientation and sensor behavior still requires iPad testing. Formal release review remains PENDING; tablet-test deployment exception retained.
