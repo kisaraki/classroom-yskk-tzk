@@ -16,7 +16,22 @@ let editor=null,customItems=null;
 let game=null,dataset=null,name='',busy=false,lastIdiom=null,lastIndex=-1,lastStatus='',lastFeedback=0,permissionInterrupted=false,keyboardReady=false,loading=false;
 const clock=new FixedClock(),input=new InputController(),renderer=new Renderer($('canvas'));input.attach($('joystick'));
 const landscape=()=>matchMedia('(orientation:landscape)').matches;
-for(const level of LEVELS){const el=document.createElement('span');const theme=DAYLIGHT[level.level-1];el.style.setProperty('--level',theme.color);el.textContent=`${level.level} ${theme.name} · ${level.durationSeconds}秒 / ${level.idiomsRequired}題`;$('levels').append(el);}
+for (const level of LEVELS) {
+ const theme = DAYLIGHT[level.level - 1];
+ const item = document.createElement('li');
+ item.style.setProperty('--level', theme.color);
+ const title = document.createElement('strong');
+ title.textContent = `第${level.level}關 ${theme.name}`;
+ const details = document.createElement('div');
+ details.className = 'level-details';
+ for (const label of [`${level.durationSeconds} 秒`, `${level.idiomsRequired} 題`]) {
+  const amount = document.createElement('span');
+  amount.textContent = label;
+  details.append(amount);
+ }
+ item.append(title, details);
+ $('levels').append(item);
+}
 function enableStart(){$('start').disabled=!dataset||!validName(name)||busy||(preview&&(!customItems||customItems.length<19));$('retry-data').disabled=loading||busy;}
 async function load(){
  if(loading||busy)return;loading=true;dataset=null;enableStart();setText($('data-status'),'載入題庫與鍵盤中…');
