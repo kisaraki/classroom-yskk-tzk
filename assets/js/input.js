@@ -4,7 +4,7 @@ export function clampVector(v){const length=Math.max(1,Math.hypot(v.x,v.y));retu
 // WebKit iOS exposes Core Motion gravity; its sign is opposite to W3C
 // accelerationIncludingGravity. iPad's desktop-site navigator reports MacIntel.
 export function motionPolarity(host){const n=host.navigator;return /iPad|iPhone|iPod/.test(n?.platform||'')||(n?.platform==='MacIntel'&&n.maxTouchPoints>1)?1:-1;}
-// Must be called directly in the user gesture, before the caller's first await.
+// An undecided permission may require a real user gesture before the first await.
 export function requestPermissions(host=globalThis,onResult=()=>{}){
   const pending=[];
   for(const key of ['DeviceOrientationEvent','DeviceMotionEvent']){
@@ -50,7 +50,7 @@ export class InputController{
     this.accept(Math.cos(beta)*Math.sin(gamma)*9.80665/4,Math.sin(beta)*9.80665/4,'orientation');}
   calibrate(){if(!this.raw||this.now()-this.lastValid>TIMING.sensorTimeout)return false;this.neutral={...this.raw};this.filtered={x:0,y:0};return true;}
   clear({cancelRequest=true}={}){if(cancelRequest){this.modeRevision++;this.tiltPending=false;}this.releasePointer?.();this.joy={x:0,y:0};this.keys.clear();this.filtered={x:0,y:0};this.updateKnob?.();}
-  resetOrientation(){this.clear();this.raw=null;this.neutral=null;this.source=null;this.lastValid=-Infinity;this.lastMotion=-Infinity;}
+  resetOrientation(options){this.clear(options);this.raw=null;this.neutral=null;this.source=null;this.lastValid=-Infinity;this.lastMotion=-Infinity;}
   setMode(mode){
     this.clear();this.mode=mode;this.modeSince=this.now();this.modeMessage=mode==='tilt'?'傾斜控制':'手動搖桿';
     if(mode==='tilt')this.neutral=this.raw&&this.now()-this.lastValid<=TIMING.sensorTimeout?{...this.raw}:null;
