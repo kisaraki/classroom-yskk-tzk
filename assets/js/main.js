@@ -39,7 +39,19 @@ $('retry-data').addEventListener('click',load);load();
 function pause(reason){permissionInterrupted=busy||permissionInterrupted;game?.pause(reason);input.clear({cancelRequest:false});clock.reset();}
 function showDialog(title,text,action=null){pause('確認操作');$('source-links').hidden=true;setText($('dialog-title'),title);setText($('dialog-text'),text);$('confirm').onclick=()=>{$('dialog').close();action?.();clock.reset();};$('cancel').hidden=!action;$('dialog').showModal();}
 $('cancel').onclick=()=>$('dialog').close();
-$('about').onclick=()=>{showDialog('遊戲說明及文獻來源','依序碰撞第1至第4字，只有玩家球直接撞中才算完成。撞到未輪到的目標字或干擾字，每次扣 5 秒。\nP 暫停；R 全部重來；A 每關最多重試3次。\n【搖桿模式】\n按住左下亮藍色搖桿，往希望移動的方向拖曳；拖得越遠推力越大。放開後停止施力，球會因慣性繼續滾動。可用「切換搖桿模式」按鈕切換。\n\n【鍵盤模式（桌機）】\n使用方向鍵 ↑ ↓ ← →，或 W 上、S 下、A 左、D 右；同時按兩個方向可斜向移動。按方向鍵會切換為搖桿模式，放開後停止施力。輸入玩家名稱時不會控制球。畫面上的 P／R／A 是操作按鈕；鍵盤 A 是向左移動。\n\n【平板傾斜模式】\n先授權、確認感測資料，再平放桌面校正；哪一側壓低，球就往哪側滾。\nSafari 無法全螢幕時可使用「加入主畫面」。\n\n'+sourceMessage(dataset));$('source-links').hidden=!dataset?.items.some(item=>item.source==='moe-idioms-public-dictionary');};
+let aboutPage=0;
+function showAboutPage(index){
+ aboutPage=index;
+ for(const [i,panel] of [...document.querySelectorAll('[data-about-panel]')].entries())panel.hidden=i!==index;
+ for(const button of document.querySelectorAll('[data-about]'))button.setAttribute('aria-pressed',String(Number(button.dataset.about)===index));
+ $('about-prev').disabled=index===0;$('about-next').disabled=index===3;
+ setText($('about-page'),(index+1)+' / 4');$('about-guide').scrollTop=0;
+}
+$('about').onclick=()=>{pause('說明已關閉，準備好後按繼續');setText($('about-source'),sourceMessage(dataset));$('source-links').hidden=!dataset?.items.some(item=>item.source==='moe-idioms-public-dictionary');showAboutPage(0);$('about-guide').showModal();};
+for(const button of document.querySelectorAll('[data-about]'))button.onclick=()=>showAboutPage(Number(button.dataset.about));
+$('about-prev').onclick=()=>showAboutPage(Math.max(0,aboutPage-1));$('about-next').onclick=()=>showAboutPage(Math.min(3,aboutPage+1));
+$('about-close').onclick=()=>$('about-guide').close();
+$('about-tilt').onclick=()=>{$('about-guide').close();openGuide();};
 $('start').onclick=async()=>{
  if(busy||!dataset||!validName(name)||(preview&&(!customItems||customItems.length<19)))return;busy=true;permissionInterrupted=false;enableStart();
  const playerName=name.trim(),gameItems=preview?customItems:dataset.items;
