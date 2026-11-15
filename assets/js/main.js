@@ -17,18 +17,20 @@ let game=null,dataset=null,name='',busy=false,lastIdiom=null,lastIndex=-1,lastSt
 const clock=new FixedClock(),input=new InputController(),renderer=new Renderer($('canvas'));input.attach($('joystick'));
 const landscape=()=>matchMedia('(orientation:landscape)').matches;
 for (const level of LEVELS) {
- const row = document.createElement('tr');
  const theme = DAYLIGHT[level.level - 1];
- const title = document.createElement('th');
- title.scope = 'row';
- title.textContent = `第${level.level}關　${theme.name}`;
- row.append(title);
+ const item = document.createElement('li');
+ item.style.setProperty('--level', theme.color);
+ const title = document.createElement('strong');
+ title.textContent = `第${level.level}關 ${theme.name}`;
+ const details = document.createElement('div');
+ details.className = 'level-details';
  for (const label of [`${level.durationSeconds} 秒`, `${level.idiomsRequired} 題`]) {
-  const amount = document.createElement('td');
+  const amount = document.createElement('span');
   amount.textContent = label;
-  row.append(amount);
+  details.append(amount);
  }
- $('levels').append(row);
+ item.append(title, details);
+ $('levels').append(item);
 }
 function enableStart(){$('start').disabled=!dataset||!validName(name)||busy||(preview&&(!customItems||customItems.length<19));$('retry-data').disabled=loading||busy;}
 async function load(){

@@ -1,6 +1,6 @@
-/* Hallmark · v2.0.0 · built: the project · scope: app · genre: playful · redesign: full · theme: Guanyin coast (by request) · copy: verbatim */
-/* Critique: a full-width coast scene introduces the game; the controls and schedule sit below it on an open surface. */
-/* Hallmark · reworded "20261115.8" to "20261115.9" · version increment for the published restyle */
+/* Hallmark · v2.0.0 · built: the project · scope: app · genre: playful · redesign: restyle · theme: Guanyin coast (by request) · copy: verbatim */
+/* Critique: the coast illustration leads; glass edges distinguish surfaces that players touch. */
+/* Hallmark · reworded "20261115.7" to "20261115.8" · version increment for the published restyle */
 :root {
   --ui: system-ui, "Microsoft JhengHei", sans-serif;
   --brush: "DFKai-SB", BiauKai, KaiTi, STKaiti, serif;
@@ -88,118 +88,97 @@ input:is([type=text],[type=search]), select, textarea, #edit-word, .sound-fields
 }
 .actions { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 8px; }
 
-/* Coast scene, followed by the controls and the level schedule. */
+/* One illustration, with game setup beside it. */
 header {
   min-height: var(--bar);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 4px 12px;
+  gap: 8px;
   padding: 8px max(3%, calc((100% - 1280px) / 2));
-  background: var(--paper);
+  background: var(--ice);
+  border-bottom: 1px solid var(--rim);
 }
 header strong { font-size: clamp(16px, 1.8vw, 24px); }
-header button { border: 0; background: transparent; border-radius: 4px; font-size: 14px; }
+header button { font-size: 14px; }
 #environment { margin-inline-start: auto; color: var(--ink-soft); font-size: 12px; white-space: nowrap; }
-#home { max-width: 1440px; margin-inline: auto; }
-.coast-hero {
+#home {
   display: grid;
-  grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr);
-  background: var(--sea-deep);
-  color: var(--ice);
+  grid-template-columns: minmax(0, 1.24fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(20px, 4vw, 52px);
+  max-width: 1360px;
+  margin-inline: auto;
+  padding: clamp(16px, 3vh, 32px) 4%;
 }
-.coast-title {
-  display: grid;
-  align-content: center;
-  padding: clamp(24px, 3.8vw, 56px);
-}
-.coast-title h1 {
-  margin: 0;
-  font-family: var(--brush);
-  font-size: clamp(36px, 5.2vw, 76px);
-  line-height: 1.02;
-}
-.coast-title > p { margin: 12px 0 0; font-size: clamp(14px, 1.35vw, 18px); }
-.organizers { margin-top: clamp(16px, 3vh, 28px); }
-.organizers p { margin: 0; font-size: 13px; }
-.organizers .motto { margin-bottom: 4px; font-family: var(--brush); font-size: 22px; color: var(--seafoam); }
-.guanyin-scroll { position: relative; aspect-ratio: 3 / 2; margin: 0; overflow: clip; }
+.intro, .name-card { min-width: 0; }
+.intro h1 { margin: 0; font-family: var(--brush); font-size: clamp(27px, 4.1vw, 52px); color: var(--sea-deep); }
+.intro h1 span { display: inline-block; }
+.intro > p { margin: 4px 0 12px; }
+.guanyin-scroll { position: relative; margin: 0 0 12px; }
 .guanyin-scroll img {
   display: block;
-  position: absolute;
-  inset: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 44vh;
   object-fit: cover;
-  object-position: center 55%;
+  object-position: center 57%;
+  border-radius: 12px 12px 4px 4px;
 }
-.guanyin-scroll::after {
+.guanyin-scroll::before {
   content: '';
   position: absolute;
-  inset: 0;
+  inset: 0 0 24px;
   pointer-events: none;
-  background: linear-gradient(116deg, transparent 32%, var(--shine) 47%, transparent 62%);
-  opacity: 0;
-  animation: coastal-light 4s var(--ease-out) both;
+  border-radius: 12px 12px 4px 4px;
+  box-shadow: inset 0 1px 0 var(--shine);
+  background: linear-gradient(124deg, var(--shine), transparent 30%);
+  opacity: .14;
+  animation: coastal-light 3.2s var(--ease-out) 2 alternate;
 }
-@keyframes coastal-light {
-  0% { transform: translateX(-35%); opacity: 0; }
-  40% { opacity: .14; }
-  100% { transform: translateX(35%); opacity: 0; }
-}
-.guanyin-scroll figcaption {
-  position: absolute;
-  z-index: 1;
-  inset: auto 0 0 auto;
-  padding: 4px 12px;
-  background: var(--overlay);
-  color: var(--ice);
-  font-size: 12px;
-}
-.home-workbench {
+@keyframes coastal-light { from { opacity: .06; } to { opacity: .23; } }
+.guanyin-scroll figcaption { padding-top: 4px; color: var(--ink-soft); font-size: 12px; line-height: 20px; }
+#levels {
   display: grid;
-  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
-  gap: clamp(24px, 5vw, 72px);
-  max-width: 1200px;
-  margin-inline: auto;
-  padding: 20px 4% 28px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 90px), 1fr));
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-variant-numeric: tabular-nums;
 }
-.name-card, .level-guide, .player-field { min-width: 0; }
-.name-card h2, .level-table caption { margin: 0 0 8px; font-size: 23px; font-weight: 700; text-align: start; }
+#levels li { padding-top: 8px; border-top: 3px solid var(--level); min-width: 0; }
+#levels strong { white-space: nowrap; font-size: 14px; }
+.level-details { display: flex; flex-wrap: wrap; gap: 4px 8px; margin-top: 4px; font-size: 13px; color: var(--ink-soft); }
+.level-details span { white-space: nowrap; }
+.organizers { border-top: 1px solid var(--rim); margin-top: 12px; padding-top: 8px; }
+.organizers p, .intro .hint { margin: 0; font-size: 12px; }
+.organizers .motto { font-family: var(--brush); color: var(--sea-deep); font-size: 17px; }
+.intro .hint { color: var(--ink-soft); margin-top: 4px; }
+.name-card {
+  padding: clamp(12px, 2vw, 24px);
+  border: 1px solid var(--rim);
+  border-radius: 14px;
+  background: var(--ice);
+  box-shadow: 0 2px 0 var(--rim), 0 12px 24px -14px var(--depth);
+}
+.name-card h2 { margin: 0 0 12px; font-size: 24px; }
 .name-card label { font-size: 14px; font-weight: 700; }
-.launch-form { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: end; gap: 8px; }
 .name-row { display: flex; gap: 8px; align-items: center; margin-top: 4px; }
 #player-name { flex: 1; min-height: 48px; padding: 8px 12px; }
-#name-length { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
-#start, .joystick-knob { box-shadow: inset 0 1px 0 var(--shine), inset 0 -3px 0 var(--depth), 0 3px 5px var(--glass-shadow); }
-#start { padding-inline: 20px; }
+#name-length { white-space: nowrap; font-variant-numeric: tabular-nums; }
 #keyboard { display: grid; grid-template-columns: repeat(10, minmax(0,1fr)); gap: 4px; margin: 12px 0; }
-#keyboard button {
-  min-width: 0;
-  min-height: 36px;
-  padding: 4px 0;
-  border: 0;
-  border-radius: 4px;
-  background: var(--mist);
-  box-shadow: inset 0 1px 0 var(--shine), inset 0 -2px 0 var(--rim);
-  font-weight: 700;
-}
-#keyboard button:hover { background: var(--seafoam); }
+#keyboard button { min-width: 0; padding: 4px 0; font-weight: 700; }
 #keyboard .key-wide { grid-column: span 2; font-size: 14px; }
-.hint { margin: 4px 0; color: var(--ink-soft); font-size: 13px; }
-.launch-row { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
-.launch-row button { border: 0; padding: 4px 8px; background: transparent; font-size: 14px; color: var(--sea-deep); text-decoration: underline; text-underline-offset: 4px; }
-#data-status { margin: 0; font-size: 13px; color: var(--ink-soft); }
-.level-table { width: 100%; border-collapse: collapse; text-align: start; font-variant-numeric: tabular-nums; }
-.level-table th, .level-table td { padding: 4px 0; }
-.level-table thead th { color: var(--ink-soft); font-weight: 400; font-size: 13px; }
-.level-table th { text-align: start; }
-.level-table th:not(:first-child), .level-table td { text-align: end; white-space: nowrap; }
-#levels th { font-weight: 700; }
-#levels td { color: var(--ink-soft); }
-.qr-share { display: flex; align-items: center; gap: 8px; margin-top: 12px; font-size: 13px; color: var(--ink-soft); }
-#qr-open { line-height: 0; padding: 2px; border-color: transparent; }
-#qr-open img { display: block; width: 52px; height: 52px; }
+#editor-open { font-size: 14px; }
+#data-status { margin: 8px 0; font-size: 13px; color: var(--ink-soft); }
+.launch-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding-top: 8px; border-top: 1px solid var(--rim); }
+#qr-open { line-height: 0; padding: 0; }
+#qr-open img { display: block; }
+#start, .joystick-knob {
+  box-shadow: inset 0 1px 0 var(--shine), inset 0 -3px 0 var(--depth), 0 3px 5px var(--glass-shadow);
+}
+#start { padding-inline: 20px; }
 
 /* The polished rail contains the canvas, gate and pause overlay. */
 #game {
@@ -213,10 +192,10 @@ header button { border: 0; background: transparent; border-radius: 4px; font-siz
   touch-action: none;
   user-select: none;
 }
-.hud { padding: 8px 12px; }
+.hud { padding: 8px 12px; border-top: 3px solid var(--accent); border-bottom: 1px solid var(--rim); }
 .stats { display: flex; align-items: center; gap: 8px; }
 #player-label { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 18%; }
-#level-label { background: color-mix(in srgb, var(--accent) 12%, var(--ice)); padding: 4px 8px; border-radius: 4px; font-weight: 700; }
+#level-label { background: var(--mist); padding: 4px 8px; border-radius: 4px; font-weight: 700; }
 #timer { margin-inline-start: auto; font-size: clamp(18px, 2.4vw, 27px); font-variant-numeric: tabular-nums; }
 .stats > :not(#player-label) { flex-shrink: 0; white-space: nowrap; }
 #cards { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 8px; margin-top: 8px; }
@@ -365,19 +344,19 @@ dialog h2 { margin: 0 0 12px; }
 #qr-dialog a { overflow-wrap: anywhere; }
 #about-guide, #control-guide { width: min(850px, 94%); }
 .voyage-label { margin-bottom: 4px; font-size: 13px; color: var(--ink-soft); }
-.guide-progress, .about-progress { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 0; padding: 0; margin: 12px 0; list-style: none; text-align: center; }
-.guide-progress li, .about-progress button { border: 0; border-radius: 4px; padding: 8px 4px; background: transparent; font-size: 14px; font-weight: 700; }
-.guide-progress .current, .about-progress button[aria-pressed=true] { background: var(--seafoam); color: var(--sea-deep); }
+.guide-progress, .about-progress { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 0; padding: 0; margin: 12px 0; border-bottom: 1px solid var(--rim); list-style: none; text-align: center; }
+.guide-progress li, .about-progress button { border: 0; border-bottom: 3px solid transparent; border-radius: 0; padding: 8px 4px; background: transparent; font-size: 14px; font-weight: 700; }
+.guide-progress .current, .about-progress button[aria-pressed=true] { border-color: var(--sea); background: var(--mist); color: var(--sea-deep); }
 .guide-progress .done { color: var(--kelp); }
 .guide-current { padding: 8px 0; }
 .guide-current h3, .about-controls h4 { margin: 0; color: var(--sea-deep); }
 .guide-current p, .guide-current li { line-height: 1.7; }
 #guide-status { min-height: 1.65em; }
-.guide-actions, .about-actions { padding-top: 12px; }
+.guide-actions, .about-actions { border-top: 1px solid var(--rim); padding-top: 12px; }
 .about-actions span { margin-inline-end: auto; font-variant-numeric: tabular-nums; }
 .about-controls { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
 .about-controls.two { grid-template-columns: repeat(2,minmax(0,1fr)); }
-.about-controls > * { padding-top: 8px; }
+.about-controls > * { border-top: 1px solid var(--rim); padding-top: 8px; }
 .rule-highlight { background: var(--sand); padding: 8px 12px; }
 kbd { display: inline-block; border: 1px solid var(--field-edge); border-bottom-width: 2px; padding: 0 4px; border-radius: 4px; }
 #source-links { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -392,7 +371,7 @@ kbd { display: inline-block; border: 1px solid var(--field-edge); border-bottom-
 .editor-layout { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 20px; }
 #editor-list { display: grid; gap: 4px; max-height: 46vh; overflow: auto; margin-top: 8px; touch-action: pan-y; }
 .editor-row { text-align: start; }
-#edit-form { padding-left: 16px; }
+#edit-form { border-left: 1px solid var(--rim); padding-left: 16px; }
 #edit-form h3 { margin: 0; }
 #idiom-editor label:not(.import-button) { display: block; margin: 8px 0 4px; }
 #idiom-editor :is(input:not([type=file],[type=checkbox]), select, textarea) { width: 100%; }
@@ -402,8 +381,8 @@ kbd { display: inline-block; border: 1px solid var(--field-edge); border-bottom-
 #edit-delete { color: var(--danger); }
 
 @media (orientation: landscape) and (max-height: 680px) {
-  .coast-title { padding: 16px 24px; }
-  .guanyin-scroll { aspect-ratio: auto; min-height: 230px; }
+  #home { padding-block: 12px; }
+  .guanyin-scroll img { max-height: 34vh; }
   #game { gap: 4px; padding-block: 4px; }
   .hud { padding: 4px 8px; }
   #cards { margin-top: 4px; }
@@ -414,21 +393,18 @@ kbd { display: inline-block; border: 1px solid var(--field-edge); border-bottom-
   header button { font-size: 12px; padding-inline: 8px; }
   .about-progress { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .about-controls, .about-controls.two, .editor-layout { grid-template-columns: minmax(0,1fr); }
-  #edit-form { padding: 12px 0 0; }
+  #edit-form { border-left: 0; border-top: 1px solid var(--rim); padding: 12px 0 0; }
   #editor-list { max-height: 25vh; }
 }
 @media (orientation: portrait) {
-  .coast-hero, .home-workbench { grid-template-columns: minmax(0,1fr); }
-  .coast-title h1 { font-size: clamp(35px, 7vw, 58px); }
-  .guanyin-scroll { aspect-ratio: 3 / 2; }
-  #keyboard button { min-height: 44px; }
+  #home { grid-template-columns: minmax(0,1fr); }
+  .guanyin-scroll img { max-height: none; }
   body:has(#game:not([hidden])) #portrait { display: grid; align-content: center; position: fixed; inset: 0; z-index: 10; text-align: center; padding: 16px; color: var(--ice); background: var(--night); }
 }
 @media (max-width: 360px) {
   #keyboard .key-wide { grid-column: span 3; }
   #keyboard button { min-height: 44px; }
-  .launch-form { grid-template-columns: minmax(0,1fr); }
-  #start { justify-self: start; }
+  .launch-row .actions { gap: 4px; }
   .launch-row button { padding-inline: 8px; }
 }
 @media (prefers-reduced-motion: reduce) {
