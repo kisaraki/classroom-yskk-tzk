@@ -9,7 +9,7 @@ import {Game,FixedClock} from './state.js?v=20261114.11';
 import {mountKeyboard,validName} from './keyboard.js?v=20261114.10';
 import {InputController} from './input.js?v=20261114.5';
 import {requestStartAccess,lockLandscape} from './startup.js?v=20261114.5';
-import {Renderer} from './renderer.js?v=20261115.7';
+import {Renderer} from './renderer.js?v=20261115.10';
 import {DAYLIGHT,gateProgress} from './daylight.js?v=20261114.8';
 const $=id=>document.getElementById(id),tabletTest=SITE_MODE==='tablet-test',preview=tabletTest||(['localhost','127.0.0.1','[::1]'].includes(location.hostname)&&new URLSearchParams(location.search).get('preview')==='1');
 let editor=null,customItems=null;
