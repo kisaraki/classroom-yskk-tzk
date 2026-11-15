@@ -3,15 +3,18 @@ export function validateDataset(data,{preview=false}={}) {
   if(!data || data.schemaVersion!==1 || !Array.isArray(data.items) || data.count!==data.items.length) throw new Error('題庫格式不正確。');
   if(preview ? data.items.length<19 : data.items.length!==500) throw new Error(preview?'預覽至少需要19條不同成語。':'正式題庫須有500條。');
   if(!preview && data.linguisticReviewStatus!=='APPROVED') throw new Error('正式題庫尚待語文核校，暫時無法開始。');
+  validateItems(data.items);return data.items;
+}
+export function validateItems(items){
   const ids=new Set(),words=new Set();
-  for(const item of data.items) {
+  for(const item of items) {
     if(!item || typeof item.id!=='string' || ids.has(item.id) || typeof item.idiom!=='string' || !/^[\u3400-\u9FFF\uF900-\uFAFF]{4}$/u.test(item.idiom) || words.has(item.idiom) ||
       !Array.isArray(item.zhuyin) || item.zhuyin.length!==4 || item.zhuyin.some(z=>typeof z!=='string'||!/^˙?[ㄅ-ㄩ]+[ˊˇˋ]?$/u.test(z)) ||
       typeof item.definition!=='string' || !item.definition.trim() || typeof item.source!=='string' || !item.source.trim() || !Number.isInteger(item.difficulty)||item.difficulty<1||item.difficulty>5)
       throw new Error(`題庫條目不完整或重複：${item?.id ?? '未知'}。`);
     ids.add(item.id);words.add(item.idiom);
   }
-  return data.items;
+  return items;
 }
 export function choose19(items,seed) {
   if(items.length<19 || new Set(items.map(x=>x.idiom)).size!==items.length) throw new Error('需要至少19條互異成語');
