@@ -1,3 +1,4 @@
+import {requestDisplay} from './display.js?v=20261115.1';
 import {setText,progressMessage,summaryMessage,sourceMessage,resultStats,controlLabel} from './ui.js?v=20261114.9';
 import {SITE_MODE} from './site-config.js';
 import {LEVELS} from './config.js?v=20261114.11';
@@ -6,7 +7,7 @@ import {Game,FixedClock} from './state.js?v=20261114.11';
 import {mountKeyboard,validName} from './keyboard.js?v=20261114.10';
 import {InputController} from './input.js?v=20261114.5';
 import {requestStartAccess,lockLandscape} from './startup.js?v=20261114.5';
-import {Renderer} from './renderer.js?v=20261114.8';
+import {Renderer} from './renderer.js?v=20261115.1';
 import {DAYLIGHT,gateProgress} from './daylight.js?v=20261114.8';
 const $=id=>document.getElementById(id),tabletTest=SITE_MODE==='tablet-test',preview=tabletTest||(['localhost','127.0.0.1','[::1]'].includes(location.hostname)&&new URLSearchParams(location.search).get('preview')==='1');
 let game=null,dataset=null,name='',busy=false,lastIdiom=null,lastIndex=-1,lastStatus='',lastFeedback=0,permissionInterrupted=false,keyboardReady=false,loading=false;
@@ -63,11 +64,11 @@ $('control-help').onclick=openGuide;
 $('guide-close').onclick=()=>$('control-guide').close();
 $('grant-sensors').onclick=()=>{
  setText($('guide-status'),'正在請求感測器授權，請查看瀏覽器提示…');
- input.requestTilt().then(ok=>setText($('guide-status'),ok?'已開啟傾斜模式，請保持平板穩定，再按「以目前姿勢校正」。':'未能開啟感測器，請使用搖桿。若曾拒絕授權，請重新載入網頁再試。'));
+ input.requestTilt().then(ok=>setText($('guide-status'),ok?'已開啟傾斜模式，請保持平板穩定，平放在平整桌面上，再按「已平放桌面，開始校正」。':'未能開啟感測器，請使用搖桿。若曾拒絕授權，請重新載入網頁再試。'));
 };
 function calibrateFromGuide(){
  const ok=input.calibrate();
- setText($('guide-status'),ok?'✓ 已以目前姿勢校正。關閉說明後，按繼續。':'尚未收到感測資料，請先開啟授權並輕輕傾斜平板；也可使用搖桿。');
+ setText($('guide-status'),ok?'✓ 已依平整桌面校正水平。關閉說明後，按繼續。':'尚未收到感測資料，請先開啟授權並輕輕傾斜平板；也可使用搖桿。');
 }
 $('guide-calibrate').onclick=calibrateFromGuide;
 $('guide-joystick').onclick=()=>{input.setMode('joystick');setText($('guide-status'),'已切換為搖桿模式，拖曳左下方亮藍色搖桿即可操作。');};
@@ -124,3 +125,16 @@ function drawUI(){
  if(lastStatus!==game.status){lastStatus=game.status;clock.reset();}
 }
 let previous=performance.now();function frame(now){const delta=(now-previous)/1000;previous=now;const gravity=input.gravity(now);if(game&&!document.hidden&&landscape())clock.advance(delta,dt=>game.tick(dt,gravity));drawUI();if(game)renderer.draw(game,now);requestAnimationFrame(frame);}requestAnimationFrame(frame);
+
+$('entry-yes').onclick=()=>{$('entry-choice').close();$('display-guide').showModal();};
+$('entry-no').onclick=()=>$('entry-choice').close();
+$('display-help').onclick=()=>{$('control-guide').close();$('display-guide').showModal();};
+$('display-close').onclick=()=>$('display-guide').close();
+$('display-request').onclick=async()=>{
+ const button=$('display-request');button.disabled=true;
+ const result=await requestDisplay();
+ setText($('display-status'),(result.fullscreen?'已進入全螢幕。':'此瀏覽器未進入全螢幕，請依上方加入主畫面說明操作。')+(result.locked?'已鎖定橫向。':'請手動將平板轉為橫向。'));
+ button.disabled=false;
+};
+$('qr-open').onclick=()=>$('qr-dialog').showModal();$('qr-close').onclick=()=>$('qr-dialog').close();
+$('entry-choice').showModal();
