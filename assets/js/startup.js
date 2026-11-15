@@ -1,16 +1,11 @@
-import {requestPermissions} from './input.js?v=20261114.5';
+import {requestPermissions} from './input.js?v=20261115.11';
+import {requestDisplay} from './display.js?v=20261115.11';
 
-function attempt(action){
-  try{return Promise.resolve(action()).then(()=>true,()=>false);}
-  catch{return Promise.resolve(false);}
-}
-
-// Invoke this directly in Start's click handler: permission and fullscreen calls
-// must happen before yielding, even if the browser ultimately rejects them.
+// Ask for motion before fullscreen can consume the user's activation.
 export function requestStartAccess(host=globalThis,timeoutMs=2200,requestMotion=()=>requestPermissions(host)){
   const permissions=requestMotion();
-  const fullscreen=attempt(()=>host.document?.documentElement?.requestFullscreen?.());
-  const settled=Promise.allSettled([permissions,fullscreen]);
+  const display=requestDisplay(host,timeoutMs);
+  const settled=Promise.allSettled([permissions,display]);
   let timer;
   return Promise.race([
     settled.then(()=>({timedOut:false})),
@@ -18,6 +13,15 @@ export function requestStartAccess(host=globalThis,timeoutMs=2200,requestMotion=
   ]).finally(()=>clearTimeout(timer));
 }
 
-export function lockLandscape(host=globalThis){
-  return attempt(()=>host.screen?.orientation?.lock?.('landscape'));
+// A load-time attempt may be rejected before the browser has a user gesture.
+// Retry on the first real click, before the clicked button's own handler runs.
+export function requestHomeAccess(document,prepare){
+  function retry(event){
+    if(!event.isTrusted)return;
+    document.removeEventListener('click',retry,true);
+    // The Start button already requests the same access in its own handler.
+    if(!event.target?.closest?.('#start'))void prepare();
+  }
+  document.addEventListener('click',retry,true);
+  void prepare();
 }

@@ -1,4 +1,4 @@
-// Must be invoked by an explicit click; never claim unsupported APIs succeeded.
+// Browsers can reject the initial attempt until a real user click.
 export async function requestDisplay(host=globalThis,timeoutMs=2000){
  const bounded=async action=>{
   let timer;

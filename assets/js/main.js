@@ -1,14 +1,14 @@
 import {mountEditor} from './editor.js?v=20261115.4';
 import {guideStep,GUIDE_STEPS} from './tilt-guide.js?v=20261115.3';
-import {requestDisplay} from './display.js?v=20261115.1';
+import {requestDisplay} from './display.js?v=20261115.11';
 import {setText,progressMessage,summaryMessage,sourceMessage,resultStats,controlLabel} from './ui.js?v=20261114.9';
 import {SITE_MODE} from './site-config.js';
 import {LEVELS} from './config.js?v=20261114.11';
 import {loadDataset} from './idioms.js?v=20261115.4';
 import {Game,FixedClock} from './state.js?v=20261114.11';
 import {mountKeyboard,validName} from './keyboard.js?v=20261114.10';
-import {InputController} from './input.js?v=20261114.5';
-import {requestStartAccess,lockLandscape} from './startup.js?v=20261114.5';
+import {InputController} from './input.js?v=20261115.11';
+import {requestHomeAccess,requestStartAccess} from './startup.js?v=20261115.11';
 import {Renderer} from './renderer.js?v=20261115.10';
 import {DAYLIGHT,gateProgress} from './daylight.js?v=20261114.8';
 const $=id=>document.getElementById(id),tabletTest=SITE_MODE==='tablet-test',preview=tabletTest||(['localhost','127.0.0.1','[::1]'].includes(location.hostname)&&new URLSearchParams(location.search).get('preview')==='1');
@@ -16,6 +16,17 @@ let editor=null,customItems=null;
 let game=null,dataset=null,name='',busy=false,lastIdiom=null,lastIndex=-1,lastStatus='',lastFeedback=0,permissionInterrupted=false,keyboardReady=false,loading=false;
 const clock=new FixedClock(),input=new InputController(),renderer=new Renderer($('canvas'));input.attach($('joystick'));
 const landscape=()=>matchMedia('(orientation:landscape)').matches;
+let preferJoystick=false;
+function requestAutomaticTilt(){
+ if(preferJoystick||input.tiltPending||input.mode==='tilt')return;
+ const states=Object.values(input.permission).map(({state})=>state);
+ if(states.includes('denied')&&!states.includes('granted'))return;
+ const sensors=[globalThis.DeviceOrientationEvent,globalThis.DeviceMotionEvent];
+ const canUseTilt=sensors.some(sensor=>typeof sensor?.requestPermission==='function')||
+  (navigator.maxTouchPoints>0&&sensors.some(Boolean))||input.raw;
+ if(canUseTilt)return input.requestTilt();
+}
+const prepareAccess=()=>requestStartAccess(globalThis,2200,requestAutomaticTilt);
 for (const level of LEVELS) {
  const theme = DAYLIGHT[level.level - 1];
  const item = document.createElement('li');
@@ -71,9 +82,8 @@ $('start').onclick=async()=>{
  if(busy||!dataset||!validName(name)||(preview&&(!customItems||customItems.length<19)))return;busy=true;permissionInterrupted=false;enableStart();
  const playerName=name.trim(),gameItems=preview?customItems:dataset.items;
  $('player-name').blur();
- const access=requestStartAccess(globalThis,2200,()=>guideCalibrated&&input.mode==='tilt'&&input.now()-input.lastValid<2000?Promise.resolve():input.requestTilt());
+ const access=prepareAccess();
  try{await access;
-   lockLandscape();
    game=new Game(gameItems);game.start(playerName);$('home').hidden=true;$('game').hidden=false;$('home-button').hidden=false;renderer.resize();
    if(permissionInterrupted||document.hidden||!landscape())game.pause('準備完成，按繼續開始');
  }catch(error){setText($('data-status'),`無法開始：${error.message}`);}finally{busy=false;enableStart();clock.reset();}
@@ -117,7 +127,7 @@ $('control-help').onclick=openGuide;
 $('guide-close').onclick=()=>$('control-guide').close();
 $('control-guide').addEventListener('close',()=>{guideRequest++;if(input.tiltPending)input.setMode('joystick');});
 $('grant-sensors').onclick=()=>{
- const serial=++guideRequest;guideCalibrated=false;setText($('guide-status'),'請查看瀏覽器授權提示，選擇「允許」。');
+ const serial=++guideRequest;preferJoystick=false;guideCalibrated=false;setText($('guide-status'),'請查看瀏覽器授權提示，選擇「允許」。');
  input.requestTilt().then(ok=>{if(serial!==guideRequest)return;setText($('guide-status'),ok?'授權程序已完成，接著確認有效感測資料。':'未取得授權。可重新載入頁面再試，或按「使用搖桿」。');});
  setTimeout(()=>{if(serial===guideRequest&&input.tiltPending){input.setMode('joystick');setText($('guide-status'),'授權尚未完成，請再按一次授權按鈕，或使用搖桿。');}},10000);
 };
@@ -126,15 +136,20 @@ $('guide-calibrate').onclick=()=>{
  guideCalibrated=input.calibrate();
  setText($('guide-status'),guideCalibrated?'✓ 水平校正成功！請按「④ 完成引導」。':'感測資料已中斷，請重新偵測後再校正。');updateGuide();
 };
-$('guide-joystick').onclick=()=>{guideRequest++;guideCalibrated=false;input.setMode('joystick');setText($('guide-status'),'已選擇搖桿模式。按「稍後設定，關閉」後，可拖曳搖桿操作。');};
+$('guide-joystick').onclick=()=>{guideRequest++;preferJoystick=true;guideCalibrated=false;input.setMode('joystick');setText($('guide-status'),'已選擇搖桿模式。按「稍後設定，關閉」後，可拖曳搖桿操作。');};
 for(let i=0;i<28;i++){const piece=document.createElement('i');piece.style.setProperty('--i',i);$('celebration').append(piece);}
-$('mode').onclick=()=>{if(input.mode==='tilt'||input.tiltPending){input.setMode('joystick');return;}pause('切換控制方式後，按繼續');input.requestTilt();};
+$('mode').onclick=()=>{if(input.mode==='tilt'||input.tiltPending){preferJoystick=true;input.setMode('joystick');return;}preferJoystick=false;pause('切換控制方式後，按繼續');input.requestTilt();};
 $('calibrate').onclick=openGuide;
 document.addEventListener('visibilitychange',()=>{if(document.hidden)pause('已切到背景，按繼續恢復');});
 window.addEventListener('pagehide',()=>pause('已離開頁面'));window.addEventListener('blur',()=>pause('已離開遊戲視窗'));
-matchMedia('(orientation:landscape)').addEventListener('change',()=>{pause('方向已變更，按繼續恢復');input.resetOrientation();guideCalibrated=false;});
-screen.orientation?.addEventListener('change',()=>{pause('握持方向已變更，請重新校正');input.resetOrientation();});
-if(!screen.orientation)window.addEventListener('orientationchange',()=>{pause('握持方向已變更，請重新校正');input.resetOrientation();});
+function onOrientationChange(){
+ pause('握持方向已變更，請重新校正');
+ input.resetOrientation({cancelRequest:false});
+ guideCalibrated=false;
+}
+matchMedia('(orientation:landscape)').addEventListener('change',onOrientationChange);
+if(screen.orientation)screen.orientation.addEventListener('change',onOrientationChange);
+else window.addEventListener('orientationchange',onOrientationChange);
 function drawUI(){
  updateGuide();
  setText($('control-mode'),controlLabel(input));
@@ -203,3 +218,4 @@ $('display-guide').addEventListener('close',offerTiltGuide);
 $('tilt-skip').onclick=()=>$('tilt-choice').close();
 $('tilt-guide').onclick=()=>{$('tilt-choice').close();openGuide();};
 $('entry-choice').showModal();
+requestHomeAccess(document,prepareAccess);
