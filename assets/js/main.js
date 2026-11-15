@@ -167,7 +167,7 @@ function drawUI(){
   for(const [label,value] of [['完成成語',stats.completed+'/19'],['通過關卡',stats.cleared+'/5'],['總失誤',stats.mistakes+' 次'],['重試次數',stats.retries+' 次']]){
    const item=document.createElement('div'),number=document.createElement('strong'),caption=document.createElement('span');number.textContent=value;caption.textContent=label;item.append(number,caption);$('result-stats').append(item);
   }
-  setText($('result-emblem'),game.status==='GAME_CLEAR'?'🏆':'🐬');
+  setText($('result-emblem'),game.status==='GAME_CLEAR'?'✦':'◎');
  }
  const overlay=['READY','PAUSED','LEVEL_CLEAR','LEVEL_FAILED','GAME_CLEAR'].includes(game.status);$('overlay').hidden=!overlay;
  $('continue').hidden=game.status==='READY';
