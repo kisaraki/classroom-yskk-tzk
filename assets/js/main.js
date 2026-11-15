@@ -1,3 +1,4 @@
+import {guideStep,GUIDE_STEPS} from './tilt-guide.js?v=20261115.3';
 import {requestDisplay} from './display.js?v=20261115.1';
 import {setText,progressMessage,summaryMessage,sourceMessage,resultStats,controlLabel} from './ui.js?v=20261114.9';
 import {SITE_MODE} from './site-config.js';
@@ -32,12 +33,12 @@ $('retry-data').addEventListener('click',load);load();
 function pause(reason){permissionInterrupted=busy||permissionInterrupted;game?.pause(reason);input.clear({cancelRequest:false});clock.reset();}
 function showDialog(title,text,action=null){pause('確認操作');$('source-links').hidden=true;setText($('dialog-title'),title);setText($('dialog-text'),text);$('confirm').onclick=()=>{$('dialog').close();action?.();clock.reset();};$('cancel').hidden=!action;$('dialog').showModal();}
 $('cancel').onclick=()=>$('dialog').close();
-$('about').onclick=()=>{showDialog('玩法與資料來源','依序碰撞第1至第4字，只有玩家球直接撞中才算完成。撞到未輪到的目標字或干擾字，每次扣 5 秒。\nP 暫停；R 全部重來；A 每關最多重試3次。\n傾斜控制不可用時，可隨時拖曳左下搖桿。\nSafari 無法全螢幕時可使用「加入主畫面」。\n\n'+sourceMessage(dataset));$('source-links').hidden=!dataset?.items.some(item=>item.source==='moe-idioms-public-dictionary');};
+$('about').onclick=()=>{showDialog('遊戲說明及文獻來源','依序碰撞第1至第4字，只有玩家球直接撞中才算完成。撞到未輪到的目標字或干擾字，每次扣 5 秒。\nP 暫停；R 全部重來；A 每關最多重試3次。\n【搖桿模式】\n按住左下亮藍色搖桿，往希望移動的方向拖曳；拖得越遠推力越大。放開後停止施力，球會因慣性繼續滾動。可用「切換搖桿模式」按鈕切換。\n\n【鍵盤模式（桌機）】\n使用方向鍵 ↑ ↓ ← →，或 W 上、S 下、A 左、D 右；同時按兩個方向可斜向移動。按方向鍵會切換為搖桿模式，放開後停止施力。輸入玩家名稱時不會控制球。畫面上的 P／R／A 是操作按鈕；鍵盤 A 是向左移動。\n\n【平板傾斜模式】\n先授權、確認感測資料，再平放桌面校正；哪一側壓低，球就往哪側滾。\nSafari 無法全螢幕時可使用「加入主畫面」。\n\n'+sourceMessage(dataset));$('source-links').hidden=!dataset?.items.some(item=>item.source==='moe-idioms-public-dictionary');};
 $('start').onclick=async()=>{
  if(busy||!dataset||!validName(name))return;busy=true;permissionInterrupted=false;enableStart();
  const playerName=name.trim(),gameItems=dataset.items;
  $('player-name').blur();
- const access=requestStartAccess(globalThis,2200,()=>input.requestTilt());
+ const access=requestStartAccess(globalThis,2200,()=>guideCalibrated&&input.mode==='tilt'&&input.now()-input.lastValid<2000?Promise.resolve():input.requestTilt());
  try{await access;
    lockLandscape();
    game=new Game(gameItems);game.start(playerName);$('home').hidden=true;$('game').hidden=false;$('home-button').hidden=false;renderer.resize();
@@ -59,28 +60,50 @@ $('home-button').onclick=()=>{
  if(['LEVEL_FAILED','GAME_CLEAR','LEVEL_CLEAR'].includes(game?.status))returnHome();
  else showDialog('回到首頁？','本次挑戰進度將結束，玩家名稱會保留。',returnHome);
 };
-function openGuide(){pause('操作說明已關閉，準備好後按繼續');$('guide-status').textContent=controlLabel(input);$('control-guide').showModal();}
+let guideCalibrated=false,guideRequest=0;
+function updateGuide(){
+ if(!$('control-guide').open)return;
+ const step=guideStep(input,guideCalibrated);
+ setText($('guide-step-title'),GUIDE_STEPS[step-1][0]);setText($('guide-step-text'),GUIDE_STEPS[step-1][1]);
+ for(const [i,item] of [...document.querySelectorAll('.guide-progress li')].entries()){
+  item.classList.toggle('current',i===step-1);item.classList.toggle('done',i<step-1);
+  if(i===step-1)item.setAttribute('aria-current','step');else item.removeAttribute('aria-current');
+ }
+ const fresh=!!input.raw&&input.now()-input.lastValid<2000;
+ setText($('guide-live'),controlLabel(input)+' · '+(fresh?'✓ 已收到有效感測資料':'尚未收到有效感測資料'));
+ $('grant-sensors').disabled=input.tiltPending;
+ $('guide-calibrate').disabled=step!==3;
+ $('grant-sensors').classList.toggle('primary',step===1||step===2);
+ $('guide-calibrate').classList.toggle('primary',step===3);
+ $('guide-close').classList.toggle('primary',step===4);
+ setText($('grant-sensors'),'① 開啟感測器授權');setText($('guide-calibrate'),'③ 已平放桌面，開始校正');
+ setText($('guide-close'),step===4?'④ 完成引導':'稍後設定，關閉');
+}
+function openGuide(){pause('操作說明已關閉，準備好後按繼續');guideCalibrated=false;setText($('guide-status'),'');$('control-guide').showModal();updateGuide();}
 $('control-help').onclick=openGuide;
 $('guide-close').onclick=()=>$('control-guide').close();
+$('control-guide').addEventListener('close',()=>{guideRequest++;if(input.tiltPending)input.setMode('joystick');});
 $('grant-sensors').onclick=()=>{
- setText($('guide-status'),'正在請求感測器授權，請查看瀏覽器提示…');
- input.requestTilt().then(ok=>setText($('guide-status'),ok?'已開啟傾斜模式，請保持平板穩定，平放在平整桌面上，再按「已平放桌面，開始校正」。':'未能開啟感測器，請使用搖桿。若曾拒絕授權，請重新載入網頁再試。'));
+ const serial=++guideRequest;guideCalibrated=false;setText($('guide-status'),'請查看瀏覽器授權提示，選擇「允許」。');
+ input.requestTilt().then(ok=>{if(serial!==guideRequest)return;setText($('guide-status'),ok?'授權程序已完成，接著確認有效感測資料。':'未取得授權。可重新載入頁面再試，或按「使用搖桿」。');});
+ setTimeout(()=>{if(serial===guideRequest&&input.tiltPending){input.setMode('joystick');setText($('guide-status'),'授權尚未完成，請再按一次授權按鈕，或使用搖桿。');}},10000);
 };
-function calibrateFromGuide(){
- const ok=input.calibrate();
- setText($('guide-status'),ok?'✓ 已依平整桌面校正水平。關閉說明後，按繼續。':'尚未收到感測資料，請先開啟授權並輕輕傾斜平板；也可使用搖桿。');
-}
-$('guide-calibrate').onclick=calibrateFromGuide;
-$('guide-joystick').onclick=()=>{input.setMode('joystick');setText($('guide-status'),'已切換為搖桿模式，拖曳左下方亮藍色搖桿即可操作。');};
+$('guide-calibrate').onclick=()=>{
+ if(guideStep(input,false)!==3)return;
+ guideCalibrated=input.calibrate();
+ setText($('guide-status'),guideCalibrated?'✓ 水平校正成功！請按「④ 完成引導」。':'感測資料已中斷，請重新偵測後再校正。');updateGuide();
+};
+$('guide-joystick').onclick=()=>{guideRequest++;guideCalibrated=false;input.setMode('joystick');setText($('guide-status'),'已選擇搖桿模式。按「稍後設定，關閉」後，可拖曳搖桿操作。');};
 for(let i=0;i<28;i++){const piece=document.createElement('i');piece.style.setProperty('--i',i);$('celebration').append(piece);}
 $('mode').onclick=()=>{if(input.mode==='tilt'||input.tiltPending){input.setMode('joystick');return;}pause('切換控制方式後，按繼續');input.requestTilt();};
 $('calibrate').onclick=openGuide;
 document.addEventListener('visibilitychange',()=>{if(document.hidden)pause('已切到背景，按繼續恢復');});
 window.addEventListener('pagehide',()=>pause('已離開頁面'));window.addEventListener('blur',()=>pause('已離開遊戲視窗'));
-matchMedia('(orientation:landscape)').addEventListener('change',()=>{pause('方向已變更，按繼續恢復');input.resetOrientation();});
+matchMedia('(orientation:landscape)').addEventListener('change',()=>{pause('方向已變更，按繼續恢復');input.resetOrientation();guideCalibrated=false;});
 screen.orientation?.addEventListener('change',()=>{pause('握持方向已變更，請重新校正');input.resetOrientation();});
 if(!screen.orientation)window.addEventListener('orientationchange',()=>{pause('握持方向已變更，請重新校正');input.resetOrientation();});
 function drawUI(){
+ updateGuide();
  setText($('control-mode'),controlLabel(input));
  $('control-mode').dataset.mode=input.mode;
  setText($('mode'),input.mode==='tilt'?'切換搖桿模式':'切換平板傾斜');
