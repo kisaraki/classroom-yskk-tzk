@@ -137,4 +137,13 @@ $('display-request').onclick=async()=>{
  button.disabled=false;
 };
 $('qr-open').onclick=()=>$('qr-dialog').showModal();$('qr-close').onclick=()=>$('qr-dialog').close();
+let tiltPromptPending=true;
+function offerTiltGuide(){
+ if(!tiltPromptPending||$('display-guide').open)return;
+ tiltPromptPending=false;$('tilt-choice').showModal();
+}
+$('entry-choice').addEventListener('close',offerTiltGuide);
+$('display-guide').addEventListener('close',offerTiltGuide);
+$('tilt-skip').onclick=()=>$('tilt-choice').close();
+$('tilt-guide').onclick=()=>{$('tilt-choice').close();openGuide();};
 $('entry-choice').showModal();
